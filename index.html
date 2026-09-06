@@ -1,61 +1,111 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LicoUp — Human–agent collaboration on your devices</title>
-    <meta name="description" content="LicoUp is an offline-capable human–agent collaboration client with end-to-end protected federation.">
-    <link rel="canonical" href="https://licoup.com/">
-    <link rel="stylesheet" href="/styles.css">
-  </head>
-  <body>
-    <div class="shell">
-      <nav aria-label="Primary navigation">
-        <a class="wordmark" href="/">LicoUp</a>
-        <div class="nav-links">
-          <a href="https://github.com/LicoLand/LicoUp">Source</a>
-          <a href="https://licoup.net/">Official network</a>
-          <a href="https://lico.land/">LicoLand</a>
-        </div>
-      </nav>
-      <main>
-        <p class="eyebrow">Open-source client</p>
-        <h1>Your agents, your devices, your decisions.</h1>
-        <p class="lede">
-          LicoUp supports private offline work and optional federation with
-          other agents. Communication security belongs to the endpoints:
-          intermediary nodes are never trusted with plaintext or key custody.
-        </p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LicoUp — Local-first human–agent collaboration</title>
+  <meta name="description" content="LicoUp is an open-source, local-first human–agent conversation client for working with AI agents under user-controlled privacy, approval, and endpoint boundaries.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://licoup.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LicoUp">
+  <meta property="og:title" content="LicoUp — Local-first human–agent collaboration">
+  <meta property="og:description" content="LicoUp is an open-source, local-first human–agent conversation client for working with AI agents under user-controlled privacy, approval, and endpoint boundaries.">
+  <meta property="og:url" content="https://licoup.com/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LicoUp — Local-first human–agent collaboration">
+  <meta name="twitter:description" content="LicoUp is an open-source, local-first human–agent conversation client for working with AI agents under user-controlled privacy, approval, and endpoint boundaries.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="wordmark" href="/">LicoUp</a>
+      <div class="nav-links">
+        <a href="/product/">Product</a>
+        <a href="/use-cases/">Use cases</a>
+        <a href="/architecture/">Architecture</a>
+        <a href="/security/">Security</a>
+        <a href="/status/">Status</a>
+        <a href="https://github.com/LicoLand/LicoUp">Source</a>
+      </div>
+    </nav>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Open source · Local first · Early stage</p>
+        <h1>Human–agent collaboration that stays under your control.</h1>
+        <p class="lede">LicoUp is an open-source, local-first human–agent conversation client. Its current first stage focuses on local and explicitly configured AI agents, while the architecture is designed to extend the same endpoint-controlled model to peer and federated collaboration.</p>
         <div class="actions">
-          <a class="button" href="https://github.com/LicoLand/LicoUp">View source</a>
-          <a class="button secondary" href="https://licoup.net/">Visit the official network</a>
+          <a class="button" href="/product/">Understand LicoUp</a>
+          <a class="button secondary" href="https://github.com/LicoLand/LicoUp">View source</a>
         </div>
-        <section class="section" aria-labelledby="principles-title">
-          <h2 id="principles-title">Designed around the endpoint.</h2>
-          <div class="grid">
-            <article class="card">
-              <h3>Offline first</h3>
-              <p>Useful local collaboration does not depend on joining a network.</p>
-            </article>
-            <article class="card wide">
-              <h3>End-to-end protected</h3>
-              <p>Approved peer content is protected before it leaves a user-controlled device. Relays remain untrusted transport.</p>
-            </article>
-            <article class="card wide">
-              <h3>Federation is optional</h3>
-              <p>Join the official network or another compatible federation without transferring endpoint authority to an intermediary.</p>
-            </article>
-            <article class="card">
-              <h3>Open implementation</h3>
-              <p>The client is maintained under GPL-3.0-or-later.</p>
-            </article>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <span>LicoUp by LicoLand</span>
-        <a href="https://github.com/LicoLand/LicoUp">GPL source</a>
-      </footer>
-    </div>
-  </body>
+        <div class="status-banner" role="note">
+          <strong>Current status:</strong>
+          local-agent discovery and conversation are implemented in source. Cross-device endpoint protection remains preview, no Published Lico Arc Protocol Line is supported, and no official LicoUp network is currently claimed as operating.
+          <a href="/status/">See the evidence boundary.</a>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="principles-title">
+        <div class="section-heading">
+          <p class="kicker">Product model</p>
+          <h2 id="principles-title">One conversation, clear authority boundaries.</h2>
+          <p>LicoUp is built around visible human and agent participants rather than a hidden cloud control plane. Sensitive runtime data remains endpoint-controlled, and external disclosure or effects stay explicit.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><span class="card-index">01</span><h3>Local-first agent work</h3><p>Local and explicitly configured agents can participate through a conversation experience without making network availability the product’s baseline.</p></article>
+          <article class="card"><span class="card-index">02</span><h3>Canonical conversations</h3><p>A Rust-hosted conversation backend owns durable conversation state, memberships, structured events, and private runtime bindings.</p></article>
+          <article class="card"><span class="card-index">03</span><h3>Explicit external effects</h3><p>External operations are designed around fresh, bounded approval instead of treating installation, startup, or agent intent as permanent authorization.</p></article>
+          <article class="card"><span class="card-index">04</span><h3>Protocol separation</h3><p>Lico Arc Protocol, not the LicoUp client repository, owns stable wire-observable endpoint communication semantics and federation protocol governance.</p></article>
+        </div>
+      </section>
+
+      <section class="section split" aria-labelledby="today-title">
+        <div><p class="kicker">What exists today</p><h2 id="today-title">Useful before federation.</h2></div>
+        <div class="prose">
+          <p>The current product stage is intentionally narrower than the long-term destination. Source already contains local-agent discovery and conversation, a canonical conversation backend, Assistant workflow and Subagent MCP surfaces, Gateway Runtime code, and preview peer-protection work.</p>
+          <p>That does <strong>not</strong> mean every target platform, adapter, peer feature, protocol line, hosted network, or package is released or supported. LicoUp keeps implementation, verification, release, support, and operation as separate claims.</p>
+          <p><a class="text-link" href="/status/">Read the current-status projection →</a></p>
+        </div>
+      </section>
+
+      <section class="section split" aria-labelledby="future-title">
+        <div><p class="kicker">Long-term direction</p><h2 id="future-title">From local agents to endpoint-controlled collaboration.</h2></div>
+        <div class="prose">
+          <p>The durable product direction is a secure conversation experience in which people and visible agents can collaborate across endpoints while users retain control of protected content, private keys, approval, and local effects.</p>
+          <p>Lico Arc is the separate protocol authority for the future stable endpoint wire contract. Its current protocol line is still a partial Candidate, so LicoUp does not present future Lico Arc cryptography as a released capability.</p>
+          <p><a class="text-link" href="/architecture/">See the architecture boundary →</a></p>
+        </div>
+      </section>
+
+      <section class="section evidence" aria-labelledby="evidence-title">
+        <p class="kicker">Primary evidence</p><h2 id="evidence-title">Inspect the claims.</h2>
+        <div class="link-grid">
+          <a href="https://github.com/LicoLand/LicoUp/blob/release/PRODUCT.md"><strong>Product definition</strong><span>Durable goals and boundaries</span></a>
+          <a href="https://github.com/LicoLand/LicoUp/blob/release/docs/STATUS.md"><strong>Current status</strong><span>Implementation, verification, release, support, operation</span></a>
+          <a href="https://github.com/LicoLand/LicoUp/blob/release/docs/architecture/README.md"><strong>Architecture</strong><span>Four-tier technical projection</span></a>
+          <a href="https://github.com/LicoLand/LicoArc"><strong>Lico Arc Protocol</strong><span>Independent protocol authority and Candidate status</span></a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div><strong>LicoUp</strong><span>Open-source, local-first human–agent conversation client.</span></div>
+      <div class="footer-links"><a href="https://github.com/LicoLand/LicoUp">GitHub</a><a href="https://github.com/LicoLand/LicoArc">Lico Arc Protocol</a><a href="https://lico.land/">LicoLand</a></div>
+      <p class="fineprint">LicoUp is licensed under AGPL-3.0-or-later. Product status claims are intentionally separated from long-term architecture and protocol plans.</p>
+    </footer>
+  </div>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"WebSite","@id":"https://licoup.com/#website","url":"https://licoup.com/","name":"LicoUp","description":"Official product website for LicoUp, an open-source, local-first human-agent conversation client."},
+    {"@type":"Organization","@id":"https://licoup.com/#organization","name":"LicoLand","url":"https://lico.land/","sameAs":["https://github.com/LicoLand"]},
+    {"@type":"SoftwareApplication","@id":"https://licoup.com/#software","name":"LicoUp","url":"https://licoup.com/","applicationCategory":"DeveloperApplication","applicationSubCategory":"Human-agent collaboration client","description":"Open-source, local-first human-agent conversation client for working with AI agents under user-controlled privacy, approval, and endpoint boundaries.","isAccessibleForFree":true,"license":"https://www.gnu.org/licenses/agpl-3.0.html","codeRepository":"https://github.com/LicoLand/LicoUp","author":{"@id":"https://licoup.com/#organization"},"sameAs":["https://github.com/LicoLand/LicoUp"]}
+  ]
+}
+  </script>
+</body>
 </html>
