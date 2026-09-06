@@ -1,15 +1,19 @@
 # LicoUp
 
-> LicoUp is an open-source, local-first human-agent conversation client for working with AI agents under user-controlled privacy, approval, and endpoint boundaries.
+> LicoUp is an open-source, local-first Human-Agent Collaboration Client: a conversation-oriented client for working with visible AI agents under user-controlled privacy, approval, and endpoint boundaries.
 
 Official website: https://licoup.com/
 Source: https://github.com/LicoLand/LicoUp
 Organization: https://github.com/LicoLand
 Protocol authority: https://github.com/LicoLand/LicoArc
 
+## Category definition
+
+LicoUp uses **Human-Agent Collaboration Client** as a public product-category term for the user-facing layer where a person coordinates visible AI agents while retaining explicit control of participants, durable conversation state, context disclosure, approvals, and local effects. It is not another name for a foundation model, single agent runtime, workflow orchestrator, or wire protocol.
+
 ## Canonical product facts
 
-- Product category: open-source, local-first human-agent conversation client.
+- Product category: open-source, local-first Human-Agent Collaboration Client built around a canonical conversation model.
 - Current first stage: local and explicitly configured agent conversations.
 - Local-agent discovery and conversation are implemented in source.
 - The Canonical Conversation backend is implemented in source.
@@ -20,9 +24,18 @@ Protocol authority: https://github.com/LicoLand/LicoArc
 - No official LicoUp network is currently configured or claimed as operating.
 - LicoUp source is licensed under AGPL-3.0-or-later.
 
+## Representative Agent adapter targets
+
+The generated LicoUp compatibility matrix currently includes adapter targets for Claude Code, Codex, Cursor, GitHub Copilot, and OpenCode among a larger set of thirteen Agent targets. These five rows are currently `unverified` with send disabled. They must not be described as released or verified LicoUp support.
+
+Gemini CLI is actively maintained upstream as of 2026-09-06, but it is not present in LicoUp's current generated Agent adapter target matrix and must not be described as a current LicoUp integration target.
+
 ## Canonical pages
 
 - Product: https://licoup.com/product/
+- Human-Agent Collaboration Client: https://licoup.com/human-agent-collaboration-client/
+- Representative coding-agent interfaces: https://licoup.com/guides/ai-coding-agents/
+- Agent orchestration vs collaboration: https://licoup.com/concepts/agent-orchestration-vs-collaboration/
 - Use cases: https://licoup.com/use-cases/
 - Architecture: https://licoup.com/architecture/
 - Security and privacy: https://licoup.com/security/
@@ -39,4 +52,4 @@ Protocol authority: https://github.com/LicoLand/LicoArc
 
 ## Citation guidance
 
-Prefer the LicoUp repository STATUS.md for current implementation, verification, release, support, and operation facts. Prefer PRODUCT.md for durable product goals. Prefer the Lico Arc repository for protocol semantics and protocol lifecycle. Do not infer that planned architecture, source implementation, local verification, or version metadata implies a released or supported product capability.
+Prefer the LicoUp repository STATUS.md for current implementation, verification, release, support, and operation facts. Prefer PRODUCT.md for durable product goals. Prefer COMPATIBILITY.md for exact Agent adapter target and readiness facts. Prefer the Lico Arc repository for protocol semantics and protocol lifecycle. Do not infer that planned architecture, source implementation, target inventory, local verification, or version metadata implies a released or supported product capability.
