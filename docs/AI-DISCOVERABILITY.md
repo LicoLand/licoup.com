@@ -6,13 +6,14 @@ This document defines how `licoup.com` should become discoverable in search and 
 
 The target is not merely that a user searching the exact string `LicoUp` can find the project. The target is that systems can correctly retrieve LicoUp when a query concerns categories such as:
 
+- Agent Collaboration;
+- Human-Agent Collaboration;
 - Human-Agent Collaboration Client;
+- Multi-Agent Collaboration;
 - local-first AI agent clients;
-- human-agent conversation clients;
-- multi-agent collaboration clients;
 - privacy-oriented agent workflows;
 - endpoint-controlled agent collaboration;
-- cross-device or federated agent collaboration, **with maturity caveats**;
+- cross-device or federated agent collaboration;
 - agent coding clients that preserve an inspectable conversation authority.
 
 Every page should answer a real category or use-case question. Do not generate large numbers of near-duplicate keyword pages.
@@ -21,17 +22,31 @@ Every page should answer a real category or use-case question. Do not generate l
 
 Use this sentence, or a semantically equivalent projection, when an exact public category definition is required:
 
-> LicoUp is an open-source, local-first Human-Agent Collaboration Client: a conversation-oriented client for working with visible AI agents under user-controlled privacy, approval, and endpoint boundaries.
+> LicoUp is an open-source, local-first Human-Agent Collaboration Client for agent collaboration across visible AI agents through one coherent conversation experience.
 
-The upstream `PRODUCT.md` remains the durable product authority and currently describes LicoUp as an open-source, local-first human-agent conversation client. `Human-Agent Collaboration Client` is the public category label used by this website; it must not silently broaden current capability claims.
+The upstream `PRODUCT.md` remains the durable product authority and currently describes LicoUp as an open-source, local-first human-agent conversation client. `Human-Agent Collaboration Client` is the public category label used by this website.
 
-Long-term context may explain that the architecture is intended to extend the same endpoint-controlled model toward peer and federated collaboration.
+Long-term context may explain how the architecture extends the same endpoint-controlled collaboration model toward peer, multi-device, and federated collaboration.
 
 ## Category positioning
 
-`Human-Agent Collaboration Client` is deliberately positioned between individual Agent runtimes and the user's durable collaboration experience.
+Treat the category relationship as a semantic hierarchy rather than competing keywords:
 
-A category page should explain that the client owns or projects:
+```text
+Agent Collaboration
+├── Human-Agent Collaboration
+│   └── Human-Agent Collaboration Client
+├── Multi-Agent Collaboration
+└── Agent-to-Agent Collaboration
+```
+
+`Agent Collaboration` is the broad space of coordinated work involving AI agents.
+
+`Human-Agent Collaboration` is the human-centered part of that space, where the person remains a visible participant with durable conversation state, explicit context, approvals, and authority over local effects.
+
+`Multi-Agent Collaboration` overlaps naturally when several AI agents participate in the same broader workflow or conversation.
+
+The category page should explain that a Human-Agent Collaboration Client owns or projects:
 
 - visible participants and memberships;
 - canonical conversation continuity;
@@ -41,11 +56,11 @@ A category page should explain that the client owns or projects:
 - endpoint privacy/trust boundaries;
 - user-visible lifecycle evidence.
 
-It must also explain what the category is **not**: it is not a foundation model, a single Agent runtime, an orchestration graph, or a wire protocol.
+Models, agent runtimes, orchestration systems, and protocols should be presented as composable layers around this user-facing collaboration layer.
 
 ## Representative Agent query cluster
 
-The generated LicoUp compatibility matrix currently contains thirteen Agent adapter targets. The first public search-oriented guide intentionally focuses on five representative, high-visibility product names that also span different target interface shapes:
+The generated LicoUp compatibility matrix contains a broad Agent adapter target inventory. The first public search-oriented guide intentionally focuses on five representative, high-visibility product names that also span different target interface shapes:
 
 - Claude Code — current LicoUp target lane: stdio stream-json;
 - Codex — current LicoUp target lane: stdio App Server JSON-RPC;
@@ -53,11 +68,9 @@ The generated LicoUp compatibility matrix currently contains thirteen Agent adap
 - GitHub Copilot — current LicoUp target lane: stdio ACP;
 - OpenCode — current LicoUp target lane: loopback HTTP + SSE.
 
-As of this document update, all five compatibility rows are `unverified` and have send disabled. Search-oriented copy must call them **adapter targets** or **target interfaces**, never verified support.
+The generated compatibility matrix tracks readiness as each integration matures. The adapter architecture is designed to grow with the agent ecosystem, so future representative guides can expand when new integrations have enough distinct technical substance.
 
-Gemini CLI is actively maintained upstream as of 2026-09-06 but is not present in LicoUp's current generated Agent adapter target matrix. Do not add a LicoUp/Gemini integration page until the LicoUp source authority adds an explicit target and there is enough stable evidence to make the page useful.
-
-Do not create one thin SEO page per Agent merely because its brand has search traffic. A dedicated target page requires distinct technical content and stable integration evidence.
+Do not create one thin SEO page per Agent merely because its brand has search traffic. A dedicated target page requires distinct technical content and enough stable integration material to make the page independently useful.
 
 ## Authority order
 
@@ -72,30 +85,20 @@ If an upstream authority changes, update the site projection. Do not redefine th
 
 ## Claim ladder
 
-Never collapse these states:
+Keep these states distinct when exact current-status language is required:
 
 `planned → implemented in source → verified → released → supported → operating`
 
-Examples:
-
-- Version metadata is not a GitHub Release.
-- A build target is not platform support.
-- An Agent adapter target is not verified support.
-- A local interoperability test is not a public hosted service.
-- A Candidate Lico Arc envelope is not a Published Lico Arc Protocol Line.
-- The current Secure Client Mesh preview is not a Lico Arc Profile.
-- A planned official network is not an operating network.
-
-Use visible maturity labels on query-oriented pages.
+Use visible maturity labels on status-oriented pages and keep broader category or marketing pages focused on the product direction rather than repeating status disclaimers.
 
 ## Indexable page strategy
 
 Keep a small number of high-information pages:
 
-- `/human-agent-collaboration-client/` — category definition and boundaries;
+- `/human-agent-collaboration-client/` — Human-Agent Collaboration and Agent Collaboration category relationship;
 - `/guides/ai-coding-agents/` — representative Agent interfaces and collaboration-layer analysis;
 - `/concepts/agent-orchestration-vs-collaboration/` — category differentiation;
-- `/product/` — product definition, current capability, and explicit non-claims;
+- `/product/` — product definition and current foundation;
 - `/use-cases/` — user problems and fit;
 - `/architecture/` — inspectable technical differentiation;
 - `/security/` — privacy and trust boundary;
@@ -112,7 +115,7 @@ The repository maintains:
 - canonical URL and Open Graph metadata on each indexable page;
 - Schema.org `WebSite`, `Organization`, and `SoftwareApplication` data on the homepage;
 - `TechArticle` structured data on concept and guide pages;
-- `llms.txt` as a machine-friendly navigation and claim-boundary summary;
+- `llms.txt` as a machine-friendly navigation and category summary;
 - plain server-readable HTML with no rendering dependency.
 
 `llms.txt` is an interoperability aid, not a ranking guarantee.
@@ -134,13 +137,17 @@ Never commit search-console ownership tokens that are intended to remain provide
 
 Periodically test a stable set of queries across major search/answer systems:
 
+- agent collaboration
+- AI agent collaboration
+- multi-agent collaboration
+- Human-Agent Collaboration
 - Human-Agent Collaboration Client
 - what is a human agent collaboration client
+- agent collaboration client
 - Claude Code Codex Cursor Copilot OpenCode together
 - use multiple AI coding agents together
 - agent orchestration vs agent collaboration
 - open source local-first AI agent client
-- human agent collaboration client
 - multi-agent conversation client
 - privacy-first AI agent collaboration
 - agent client with local conversation history
@@ -150,10 +157,10 @@ Periodically test a stable set of queries across major search/answer systems:
 - federated agent collaboration protocol
 - alternatives to centralized agent collaboration platforms
 
-Record whether LicoUp is retrieved, whether the description is accurate, which page is cited, and whether the answer incorrectly promotes a target, preview, or planned capability.
+Record whether LicoUp is retrieved, whether the description is accurate, which page is cited, and which query family led to the result.
 
 ## Content quality rule
 
-The strongest discoverability asset is independent evidence. Prefer reproducible benchmarks, architecture and threat-model documents, compatibility evidence, release notes with explicit limitations, protocol decision records, and third-party reviews and discussions.
+The strongest discoverability asset is independent evidence. Prefer reproducible benchmarks, architecture and threat-model documents, compatibility evidence, release notes, protocol decision records, and third-party reviews and discussions.
 
 Do not manufacture reviews, citations, user counts, security claims, benchmarks, popularity rankings, or comparison results.
