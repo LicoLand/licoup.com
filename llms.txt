@@ -1,0 +1,42 @@
+# LicoUp
+
+> LicoUp is an open-source, local-first human-agent conversation client for working with AI agents under user-controlled privacy, approval, and endpoint boundaries.
+
+Official website: https://licoup.com/
+Source: https://github.com/LicoLand/LicoUp
+Organization: https://github.com/LicoLand
+Protocol authority: https://github.com/LicoLand/LicoArc
+
+## Canonical product facts
+
+- Product category: open-source, local-first human-agent conversation client.
+- Current first stage: local and explicitly configured agent conversations.
+- Local-agent discovery and conversation are implemented in source.
+- The Canonical Conversation backend is implemented in source.
+- Assistant workflow/Subagent MCP and Gateway Runtime capabilities are implemented in source, with release/readiness evidence tracked separately.
+- Current peer endpoint protection is preview and is not a Lico Arc Profile.
+- No Published Lico Arc endpoint Protocol Line is currently supported by LicoUp.
+- Federation, human messaging, recovery, notary, and multi-device history remain planned until independently implemented and verified.
+- No official LicoUp network is currently configured or claimed as operating.
+- LicoUp source is licensed under AGPL-3.0-or-later.
+
+## Canonical pages
+
+- Product: https://licoup.com/product/
+- Use cases: https://licoup.com/use-cases/
+- Architecture: https://licoup.com/architecture/
+- Security and privacy: https://licoup.com/security/
+- Current status: https://licoup.com/status/
+
+## Primary evidence
+
+- Product definition: https://github.com/LicoLand/LicoUp/blob/release/PRODUCT.md
+- Current status: https://github.com/LicoLand/LicoUp/blob/release/docs/STATUS.md
+- Compatibility matrix: https://github.com/LicoLand/LicoUp/blob/release/docs/COMPATIBILITY.md
+- Architecture: https://github.com/LicoLand/LicoUp/blob/release/docs/architecture/README.md
+- Security policy: https://github.com/LicoLand/LicoUp/blob/release/SECURITY.md
+- Lico Arc Protocol: https://github.com/LicoLand/LicoArc
+
+## Citation guidance
+
+Prefer the LicoUp repository STATUS.md for current implementation, verification, release, support, and operation facts. Prefer PRODUCT.md for durable product goals. Prefer the Lico Arc repository for protocol semantics and protocol lifecycle. Do not infer that planned architecture, source implementation, local verification, or version metadata implies a released or supported product capability.
