@@ -1,48 +1,55 @@
 # licoup.com
 
-Public product website for [LicoUp](https://github.com/LicoLand/LicoUp), the LicoLand open-source, local-first human–agent conversation client.
+Public product website for LicoUp, a secure conversation experience shared by
+people and agents. The current local-agent client is its first implementation
+phase. Product facts remain owned by the
+[LicoUp repository](https://github.com/LicoLand/LicoUp).
 
-The site intentionally uses plain static HTML/CSS. Search crawlers and answer engines can read the same content a user receives without client-side rendering, a JavaScript build pipeline, or a framework runtime.
+The download entry points to the Apple silicon macOS DMG in the public
+[v0.1.2 GitHub Release](https://github.com/LicoLand/LicoUp/releases/tag/v0.1.2).
+That release does not establish availability on other platforms, in the App
+Store, or on an operating official network. Full Lico Arc endpoint integration
+remains future work. The public release is the authority for this download;
+source status documents must not override an observed published release.
+
+## Website
+
+The site is static HTML, CSS, and dependency-free JavaScript, with self-hosted
+fonts and artwork. The homepage shares markup, interactions, and responsive design across Chinese and English. The product guides retain their English source content and use the same visual system. Use `?lang=zh` or `?lang=en` to select a language explicitly.
+Language and motion choices are stored locally; the site has no analytics,
+backend calls, or live agent connection. Conversation examples are illustrative.
+
+Navigation, download links, product content, and FAQ work without JavaScript.
+Scripted scene selection, language switching, and optional motion are progressive
+enhancements. System reduced-motion settings and the page's pause control disable
+optional motion.
+
+Serve this directory with any static HTTP server for local preview. There is no
+build step. [DESIGN.md](DESIGN.md) records the implemented visual system;
+[PRODUCT.md](PRODUCT.md) is the website presentation brief and links to product
+authorities. Asset origins and font licenses are recorded in
+[assets/README.md](assets/README.md).
+
+The reviewed Cloudflare BIND import is stored at
+`dns/cloudflare-github-pages.txt`. Organization-verification tokens are added
+directly in the DNS provider and are never committed. DNS and GitHub Pages
+publication remain separate from local website development and verification.
 
 ## Public information architecture
 
-| URL | Purpose |
-| --- | --- |
-| `/` | Canonical product/entity landing page |
-| `/product/` | Product definition, current capability, and explicit non-claims |
-| `/use-cases/` | Query-oriented use cases with maturity labels |
-| `/architecture/` | Four-tier client architecture and Lico Arc boundary |
-| `/security/` | Security, privacy, endpoint, and transport trust boundaries |
-| `/status/` | Discovery-oriented projection of current implementation/release status |
-| `/llms.txt` | Machine-friendly navigation and claim-boundary summary |
-| `/sitemap.xml` | Search-engine discovery surface |
-| `/robots.txt` | Public crawler policy, including OAI-SearchBot |
+The homepage links to the product guide. The guide navigation preserves the
+existing product, collaboration category, use cases, architecture, security,
+and status pages; specialist pages cover coding-agent interfaces and
+orchestration versus collaboration. Their canonical URLs are indexed by
+`sitemap.xml` and `llms.txt`, with crawler access described by `robots.txt`.
+These pages project product facts from the LicoUp repository and protocol facts
+from Lico Arc. They do not replace those authorities.
 
-## Source-of-truth rule
+## Validation and delivery
 
-This repository is a **public projection**, not the authority for product or protocol truth.
-
-- `LicoLand/LicoUp:PRODUCT.md` owns durable LicoUp product goals.
-- `LicoLand/LicoUp:docs/STATUS.md` owns current implementation, verification, release, support, and operation facts.
-- `LicoLand/LicoUp:docs/COMPATIBILITY.md` owns exact platform/adapter support.
-- `LicoLand/LicoArc` owns Lico Arc protocol semantics and lifecycle.
-
-The website must never promote a plan, source implementation, candidate protocol, local verification result, version string, or build target into a release/support/operation claim.
-
-## Validate locally
-
-```bash
-python3 tools/check_site.py
-```
-
-The validator checks internal links, canonical URLs, indexability metadata, Open Graph metadata, sitemap coverage, crawler configuration, `llms.txt`, and the LicoUp license projection.
-
-## Delivery
-
-`CNAME` binds the GitHub Pages site to `licoup.com`. The reviewed Cloudflare BIND import is stored at `dns/cloudflare-github-pages.txt`. Organization-verification tokens are added directly in the DNS provider and are never committed.
-
-This site is continuously delivered and does not own a product version. Its [release profile](docs/releases/README.md) records that boundary.
-
-## Search / AI operations
-
-See [`docs/AI-DISCOVERABILITY.md`](docs/AI-DISCOVERABILITY.md) before adding new discoverability pages or changing product positioning.
+Run `python3 tools/check_site.py` to verify canonical pages, metadata, internal
+links, sitemap coverage, crawler configuration, and the license projection.
+`CNAME` binds the site to `licoup.com`; GitHub Pages publishes the `main` branch.
+This continuously delivered website has no independent product version; see
+[the release profile](docs/releases/README.md). Search and answer-engine content
+follows [the discoverability guide](docs/AI-DISCOVERABILITY.md).
