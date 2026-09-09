@@ -4,6 +4,7 @@
   <desc id="desc">The approved M2 composition with its round, inward-tapering dessert cup silhouette.</desc>
 
   <defs>
+    <clipPath id="favicon-frame"><rect width="1254" height="1254" rx="240"/></clipPath>
     <radialGradient id="background" cx="51%" cy="39%" r="80%">
       <stop offset="0" stop-color="#f9ebe4"/>
       <stop offset="0.68" stop-color="#f2e0d9"/>
@@ -126,6 +127,7 @@
       C991 620 971 646 930 663"/>
   </defs>
 
+  <g clip-path="url(#favicon-frame)">
   <rect width="1254" height="1254" fill="url(#background)"/>
 
   <use href="#gobletSilhouette" fill="url(#glassBack)"/>
@@ -162,4 +164,5 @@
 
   <use href="#rimFrontArc" fill="none" stroke="#dcf1f2" stroke-opacity="0.92" stroke-width="9" stroke-linecap="round"/>
   <use href="#rimFrontArc" fill="none" stroke="#afe0ea" stroke-opacity="0.56" stroke-width="3" stroke-linecap="round"/>
+  </g>
 </svg>

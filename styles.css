@@ -104,7 +104,7 @@ h1 { font-size: clamp(64px, 6.9vw, 96px); line-height: 1.02; font-weight: 650; l
 .ribbon { overflow: hidden; padding: 30px 0; border-bottom: 1px solid var(--line); }
 .ribbon-track { display: flex; align-items: center; justify-content: space-around; gap: 35px; width: max(100%, 1120px); max-width: 1700px; margin-inline: auto; padding-inline: 32px; }
 .ribbon-track span { white-space: nowrap; font-size: 20px; font-weight: 550; letter-spacing: -.01em; }
-.ribbon-flower { flex: none; width: 25px; height: 25px; fill: var(--orange-ink); }
+.ribbon-divider { flex: none; width: 6px; height: 6px; background: var(--orange-ink); border-radius: 50%; }
 .experience { padding-top: 116px; padding-bottom: 100px; }
 .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 48px; margin-bottom: 38px; }
 .section-heading h2 { flex: 1 1 55%; }
@@ -144,7 +144,8 @@ h1 { font-size: clamp(64px, 6.9vw, 96px); line-height: 1.02; font-weight: 650; l
 .demo-margin-note { position: absolute; left: 23px; top: 67px; width: 125px; font-size: 14px; line-height: 1.4; transform: rotate(-7deg); }
 .demo-margin-note svg { width: 67px; margin: 18px 0 0 29px; stroke: #626d51; stroke-width: 1.5; fill: none; }
 .demo-orbit { position: absolute; width: 145px; right: -23px; bottom: -22px; color: var(--orange); transform: rotate(14deg); }
-.demo-orbit svg { fill: currentColor; }
+.demo-orbit svg { fill: none; stroke: currentColor; stroke-width: 2; }
+.demo-orbit circle { fill: currentColor; stroke: none; }
 .demo-caption { color: var(--muted); text-align: center; font-size: 11px; margin-top: 19px; }
 .your-space { padding-bottom: 112px; }
 .space-intro { text-align: center; margin-bottom: 64px; }
@@ -170,7 +171,7 @@ h1 { font-size: clamp(64px, 6.9vw, 96px); line-height: 1.02; font-weight: 650; l
 .feature-control { margin-top: 64px; }
 .feature-control .feature-copy { margin-left: 30px; }
 .control-art { background: #f5d6c7; display: grid; place-items: center; }
-.control-flower { position: absolute; right: -45px; top: -26px; width: 275px; height: 275px; fill: #f0b094; transform: rotate(4deg); }
+.control-arcs { position: absolute; right: -45px; top: -26px; width: 275px; height: 275px; fill: none; stroke: #efb69c; stroke-width: 13; stroke-linecap: round; transform: rotate(4deg); }
 .choice-slip { position: relative; padding: 25px 35px 22px; max-width: 83%; text-align: center; background: #fffcf8; border-radius: var(--radius); box-shadow: 0 23px 40px -25px #5b342d77; transform: rotate(-5deg); transition: transform .6s var(--ease); }
 .control-art:hover .choice-slip { transform: rotate(0deg) translateY(-4px); }
 .choice-lock { display: grid; place-items: center; width: 47px; height: 47px; border-radius: 50%; background: #f7e3d7; color: #98573c; margin: 0 auto 16px; }
@@ -183,7 +184,8 @@ h1 { font-size: clamp(64px, 6.9vw, 96px); line-height: 1.02; font-weight: 650; l
 .open-title-wrap { display: flex; justify-content: space-between; align-items: center; gap: 50px; }
 .open-title-wrap h2 { font-size: clamp(48px, 6.3vw, 88px); line-height: 1.02; }
 .open-title-wrap h2 span:last-child { color: var(--lime); }
-.open-asterisk { flex: none; height: 173px; width: 173px; fill: var(--lilac);  }
+.open-orbit { flex: none; height: 173px; width: 173px; color: var(--lilac); fill: none; stroke: currentColor; stroke-width: 2.3; }
+.open-orbit circle { fill: currentColor; stroke: none; }
 .open-bottom { margin-top: 43px; display: flex; justify-content: space-between; align-items: end; gap: 40px; }
 .open-bottom p { max-width: 500px; color: #c7cdbf; line-height: 1.75; }
 .open-bottom .button { flex: none; }
@@ -227,7 +229,7 @@ details[open] summary .icon { transform: rotate(45deg); }
 .js .demo-tabs { display: flex; }
 .js .floating-message { animation: slip-float 7s ease-in-out infinite; }
 .js .floating-message-two { animation-delay: -3s; }
-.js .open-asterisk { animation: gentle-turn 30s linear infinite; }
+.js .open-orbit { animation: gentle-turn 30s linear infinite; }
 .js .hero-line { animation: reveal-type .9s var(--ease) both; }
 .js .accent-line { animation-delay: .1s; }
 .js .reveal.is-inview { animation: arrive .9s var(--ease) both; }
@@ -305,7 +307,7 @@ html:has(body.motion-paused) { scroll-behavior: auto; }
   .choice-slip { padding: 22px; }
   .choice-slip strong { font-size: 20px; }
   .open-content { padding-top: 70px; }
-  .open-asterisk { width: 120px; height: 120px; }
+  .open-orbit { width: 120px; height: 120px; }
   .open-bottom p { font-size: 14px; }
   .open-bottom { gap: 25px; }
   .open-bottom .button { padding: 16px 20px; font-size: 14px; }
@@ -346,7 +348,7 @@ html:has(body.motion-paused) { scroll-behavior: auto; }
   .ribbon { padding: 24px 0; }
   .ribbon-track { width: 950px; gap: 27px; padding-inline: 22px; justify-content: start; }
   .ribbon-track span { font-size: 15px; }
-  .ribbon-flower { width: 18px; height: 18px; }
+  .ribbon-divider { width: 5px; height: 5px; }
   .experience { padding-top: 66px; padding-bottom: 70px; }
   h2 { font-size: clamp(37px, 9.1vw, 50px); line-height: 1.09; }
   .section-heading { display: block; margin-bottom: 25px; }
@@ -395,7 +397,7 @@ html:has(body.motion-paused) { scroll-behavior: auto; }
   .open-content { padding-top: 59px; padding-bottom: 25px; }
   .open-title-wrap { display: block; position: relative; padding-top: 64px; }
   .open-title-wrap h2 { font-size: clamp(39px, 10vw, 57px); }
-  .open-asterisk { position: absolute; width: 46px; height: 46px; top: -3px; left: 1px; }
+  .open-orbit { position: absolute; width: 46px; height: 46px; top: -3px; left: 1px; }
   .open-bottom { display: block; margin-top: 26px; }
   .open-bottom p { font-size: 14px; }
   .open-bottom .button { margin-top: 25px; min-height: 54px; }
