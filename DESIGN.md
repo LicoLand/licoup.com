@@ -188,13 +188,13 @@ Depth is selective and ambient. The page canvas, navigation, FAQ, and most edito
 
 The base surface radius is a gently rounded 16px. Small interface layers range from 8px to 15px, while signature icon tiles reach 19px to 23px. Buttons, compact labels, language controls, scroll cues, status marks, avatars, and orbital forms use complete pills or circles. Conversation bubbles may use one tighter corner to suggest direction.
 
-Slight rotations make selected cards and slips feel hand placed. Large decorative geometry uses flowers, asterisks, rings, dots, and soft organic sculpture; these remain secondary to text and never replace the unchanged LicoUp logo.
+Slight rotations make selected cards and slips feel hand placed. Large decorative geometry uses open loops, quiet arcs, small divider dots, and rounded conversation sculpture. A small sparkle is reserved for the Make scenario and its idea card; it is not repeated as page decoration. These forms remain secondary to text and never replace the unchanged LicoUp logo.
 
 ### Named Rules
 
 **The Soft Geometry Rule.** Combine rounded rectangles with circles and orbital marks; sharp rectangles are limited to divider lines and typographic alignment.
 
-**The Stable Logo Rule.** Keep the approved LicoUp logo artwork unchanged. Expression comes from its surrounding scene, scale, and placement.
+**The Stable Logo Rule.** Keep the approved LicoUp logo artwork unchanged. The browser favicon clips the same artwork to a rounded rectangle with transparent corners, using a radius of about 19% of its width. Expression comes from its surrounding scene, scale, and placement.
 
 ## Components
 
@@ -240,7 +240,7 @@ FAQ rows are full-width native disclosure elements separated by fine rules. The 
 
 ### Motion
 
-Hero lines reveal once, content sections arrive once as they enter view, and scenario panels use a short transition on demand. Floating message slips move slowly, the open-source asterisk turns over a long cycle, and the ribbon may drift with scroll when the browser supports view timelines. Pointer parallax is limited to fine-pointer devices and is scheduled with animation frames. A footer control pauses motion, hidden-page and paused states cancel transient work, and the system reduced-motion preference disables animation, transitions, smooth scrolling, and parallax.
+Hero lines reveal once, content sections arrive once as they enter view, and scenario panels use a short transition on demand. Floating message slips move slowly, the open-source orbit turns over a long cycle, and the ribbon may drift with scroll when the browser supports view timelines. Pointer parallax is limited to fine-pointer devices and is scheduled with animation frames. A footer control pauses motion, hidden-page and paused states cancel transient work, and the system reduced-motion preference disables animation, transitions, smooth scrolling, and parallax.
 
 ## Do's and Don'ts
 
