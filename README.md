@@ -9,8 +9,10 @@ The download entry points to the Apple silicon macOS DMG in the public
 [v0.1.2 GitHub Release](https://github.com/LicoLand/LicoUp/releases/tag/v0.1.2).
 That release does not establish availability on other platforms, in the App
 Store, or on an operating official network. Full Lico Arc endpoint integration
-remains future work. The public release is the authority for this download;
-source status documents must not override an observed published release.
+remains future work. The website brings the available download and current agent setup requirements
+together in one compatibility overview at `/status/`. Homepage answers and
+guides use that same summary, grounded in the current adapter implementation
+and verification evidence.
 
 ## Website
 
@@ -37,13 +39,16 @@ publication remain separate from local website development and verification.
 
 ## Public information architecture
 
-The homepage links to the product guide. The guide navigation preserves the
-existing product, collaboration category, use cases, architecture, security,
-and status pages; specialist pages cover coding-agent interfaces and
-orchestration versus collaboration. Their canonical URLs are indexed by
-`sitemap.xml` and `llms.txt`, with crawler access described by `robots.txt`.
-These pages project product facts from the LicoUp repository and protocol facts
-from Lico Arc. They do not replace those authorities.
+The homepage body links directly to eight durable topics: the Human-Agent
+Collaboration category, coding-agent interfaces, orchestration versus
+collaboration, the product, use cases, architecture, security, and current
+compatibility. Static value links, problem-led pathways, the primary category guide,
+its reading list, and the compact guide directory connect the lively product
+story to those deeper answers. Guide navigation preserves the same information
+architecture. Their canonical URLs are indexed by `sitemap.xml` and `llms.txt`,
+with crawler access described by `robots.txt`. These pages project product facts
+from the LicoUp repository and protocol facts from Lico Arc. They do not replace
+those authorities.
 
 ## Validation and delivery
 

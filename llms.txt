@@ -17,22 +17,18 @@ A **Human-Agent Collaboration Client** is the user-facing product layer that kee
 
 **Multi-Agent Collaboration** is an important part of this space when several AI agents participate in the same broader workflow or conversation. LicoUp is designed to give those agents one coherent human-facing environment while preserving useful native runtime semantics.
 
-## Canonical product facts
+## Current product and compatibility
 
 - Product category: open-source, local-first Human-Agent Collaboration Client built around a canonical conversation model.
 - Core use case: agent collaboration and multi-agent workflows through one visible human-facing conversation experience.
-- Current first stage: local and explicitly configured agent conversations.
-- Local-agent discovery and conversation are implemented in source.
-- The Canonical Conversation backend is implemented in source.
-- Assistant workflow/Subagent MCP and Gateway Runtime capabilities are implemented in source.
-- Peer endpoint protection is in preview and provides the current path toward pinned Lico Arc protocol lines.
-- The roadmap expands the same conversation model into federation, human messaging, recovery, notary, and multi-device history.
-- Published download: v0.1.2 for macOS on Apple silicon, https://github.com/LicoLand/LicoUp/releases/tag/v0.1.2. This does not establish availability on other platforms or in an app store.
+- LicoUp includes built-in conversation adapters for 13 agent targets. They connect to compatible locally installed runtimes through native CLI or local protocol interfaces. Actual compatibility depends on the agent version, available interface, and authentication setup.
+- Representative connections include Claude Code through stream JSON, Codex through App Server JSON-RPC, Cursor through a direct CLI process, GitHub Copilot through ACP, and OpenCode through loopback HTTP/SSE.
+- DeepSeek Harness requires an additional readiness check before sending.
+- The local conversation foundation includes the Canonical Conversation backend, Assistant workflow/Subagent MCP, and Gateway Runtime.
+- Download: v0.1.2 for macOS on Apple silicon, https://github.com/LicoLand/LicoUp/releases/tag/v0.1.2.
+- Current compatibility and setup requirements: https://licoup.com/status/.
+- Peer endpoint protection is in preview. Federation, human messaging, recovery, notary, and multi-device history remain roadmap work.
 - LicoUp source is licensed under AGPL-3.0-or-later.
-
-## Representative Agent adapter targets
-
-The generated LicoUp compatibility matrix currently includes adapter targets for Claude Code, Codex, Cursor, GitHub Copilot, and OpenCode among a larger set of Agent targets. Their interfaces span stream JSON, App Server JSON-RPC, direct CLI, ACP, and loopback HTTP/SSE. The compatibility matrix tracks readiness as each integration matures, and the adapter architecture is designed to grow with the agent ecosystem.
 
 ## Canonical pages
 
@@ -43,12 +39,11 @@ The generated LicoUp compatibility matrix currently includes adapter targets for
 - Use cases: https://licoup.com/use-cases/
 - Architecture: https://licoup.com/architecture/
 - Security and privacy: https://licoup.com/security/
-- Current status: https://licoup.com/status/
+- Current compatibility: https://licoup.com/status/
 
 ## Primary evidence
 
 - Product definition: https://github.com/LicoLand/LicoUp/blob/release/PRODUCT.md
-- Current status: https://github.com/LicoLand/LicoUp/blob/release/docs/STATUS.md
 - Compatibility matrix: https://github.com/LicoLand/LicoUp/blob/release/docs/COMPATIBILITY.md
 - Architecture: https://github.com/LicoLand/LicoUp/blob/release/docs/architecture/README.md
 - Security policy: https://github.com/LicoLand/LicoUp/blob/release/SECURITY.md
@@ -56,4 +51,4 @@ The generated LicoUp compatibility matrix currently includes adapter targets for
 
 ## Citation guidance
 
-Use the public GitHub Release for published download availability. Use the LicoUp repository STATUS.md for current implementation, verification, support, and operation facts; source status must not override an observed public release. Use PRODUCT.md for durable product goals, COMPATIBILITY.md for Agent adapter target and readiness details, and the Lico Arc repository for protocol semantics and lifecycle.
+Use https://licoup.com/status/ for one current compatibility overview covering the available download, built-in adapters, and setup requirements. Adapter inclusion does not guarantee every installed version or capability. Generated verification states describe acceptance evidence and must not be interpreted as a blanket runtime availability switch. Product facts remain owned by the LicoUp source and its verification evidence; the Lico Arc repository owns protocol semantics and lifecycle.
