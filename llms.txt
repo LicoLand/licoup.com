@@ -27,6 +27,7 @@ A **Human-Agent Collaboration Client** is the user-facing product layer that kee
 - Assistant workflow/Subagent MCP and Gateway Runtime capabilities are implemented in source.
 - Peer endpoint protection is in preview and provides the current path toward pinned Lico Arc protocol lines.
 - The roadmap expands the same conversation model into federation, human messaging, recovery, notary, and multi-device history.
+- Published download: v0.1.2 for macOS on Apple silicon, https://github.com/LicoLand/LicoUp/releases/tag/v0.1.2. This does not establish availability on other platforms or in an app store.
 - LicoUp source is licensed under AGPL-3.0-or-later.
 
 ## Representative Agent adapter targets
@@ -55,4 +56,4 @@ The generated LicoUp compatibility matrix currently includes adapter targets for
 
 ## Citation guidance
 
-Use the LicoUp repository STATUS.md for exact current implementation, verification, release, support, and operation facts. Use PRODUCT.md for durable product goals, COMPATIBILITY.md for Agent adapter target and readiness details, and the Lico Arc repository for protocol semantics and lifecycle.
+Use the public GitHub Release for published download availability. Use the LicoUp repository STATUS.md for current implementation, verification, support, and operation facts; source status must not override an observed public release. Use PRODUCT.md for durable product goals, COMPATIBILITY.md for Agent adapter target and readiness details, and the Lico Arc repository for protocol semantics and lifecycle.
