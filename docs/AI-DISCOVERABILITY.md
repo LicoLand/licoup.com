@@ -75,19 +75,23 @@ Do not create one thin SEO page per Agent merely because its brand has search tr
 ## Authority order
 
 1. `LicoLand/LicoUp:PRODUCT.md` — durable product goal and responsibility boundary.
-2. `LicoLand/LicoUp:docs/STATUS.md` — current intent, implementation, verification, release, support, and operation facts.
-3. `LicoLand/LicoUp:docs/COMPATIBILITY.md` — exact platform and adapter support/target facts.
-4. `LicoLand/LicoUp:docs/architecture/*` — technical architecture projection.
-5. `LicoLand/LicoArc` — protocol semantics, construction, lifecycle, and federation-governance authority.
-6. `licoup.com` — search-friendly public projection of the authorities above.
+2. Public `LicoLand/LicoUp` GitHub Releases — published artifacts and their exact version/platform availability. Source status does not override an observed public release.
+3. `LicoLand/LicoUp:docs/STATUS.md` — current intent, implementation, verification, support, and operation facts.
+4. `LicoLand/LicoUp:docs/COMPATIBILITY.md` — exact platform and adapter support/target facts.
+5. `LicoLand/LicoUp:docs/architecture/*` — technical architecture projection.
+6. `LicoLand/LicoArc` — protocol semantics, construction, lifecycle, and federation-governance authority.
+7. `licoup.com` — search-friendly public projection of the authorities above.
 
 If an upstream authority changes, update the site projection. Do not redefine the upstream fact here.
 
-## Claim ladder
+## Claim dimensions
 
-Keep these states distinct when exact current-status language is required:
+Keep these dimensions independent when exact current-status language is required:
 
-`planned → implemented in source → verified → released → supported → operating`
+`planned / implemented in source / verified / released / supported / operating`
+
+A published artifact establishes availability for its named platform and version.
+It does not establish other platforms, stores, support commitments, or an operating network.
 
 Use visible maturity labels on status-oriented pages and keep broader category or marketing pages focused on the product direction rather than repeating status disclaimers.
 
