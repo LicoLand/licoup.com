@@ -178,13 +178,12 @@
 
       const title = document.querySelector("title[data-en][data-zh]");
       if (title) document.title = title.getAttribute(`data-${language}`) || "";
-      const description = document.querySelector(
-        'meta[name="description"][data-en][data-zh]',
-      );
-      if (description) {
-        description.setAttribute(
+      for (const metadata of document.querySelectorAll(
+        "meta[data-en][data-zh]",
+      )) {
+        metadata.setAttribute(
           "content",
-          description.getAttribute(`data-${language}`) || "",
+          metadata.getAttribute(`data-${language}`) || "",
         );
       }
 
