@@ -1,270 +1,172 @@
 ---
 name: LicoUp Website
-description: A playful conversation magazine for a friendly local-agent client.
+description: A modern, bright product site for a messenger shared by people and AI agents.
 colors:
-  conversation-orange: "#ff724e"
-  grounded-orange: "#bc4123"
-  paper: "#f8f9f5"
-  white: "#fff"
-  ink: "#252823"
-  muted-ink: "#63685f"
-  lilac: "#e3dcfb"
-  mint: "#e5eddc"
-  lime: "#d0ed86"
-  line: "#d9ddd3"
+  ink: "#15120f"
+  ink-2: "#3b352f"
+  paper: "#fbfaf8"
+  white: "#ffffff"
+  muted: "#736d66"
+  line: "#ebe6df"
+  violet: "#6a4ce0"
+  violet-deep: "#2a1d66"
+  violet-ink: "#4f36c4"
+  violet-soft: "#f1edff"
+  gold: "#d6a43c"
+  gold-light: "#f2d38b"
+  gold-ink: "#8a6114"
+  gold-soft: "#fbf3df"
+  green: "#17a664"
+  mint: "#e8f6ee"
 typography:
   display:
     fontFamily: "Bricolage Grotesque, Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif"
-    fontSize: "clamp(60px, 6.2vw, 88px)"
-    fontWeight: 650
-    lineHeight: 1.02
-    letterSpacing: "-0.04em"
-  headline:
-    fontFamily: "Bricolage Grotesque, Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif"
-    fontSize: "clamp(40px, 4.65vw, 64px)"
-    fontWeight: 650
+    fontSize: "clamp(42px, 6vw, 84px)"
+    fontWeight: 600
     lineHeight: 1.06
     letterSpacing: "-0.035em"
-  title:
+  headline:
     fontFamily: "Bricolage Grotesque, Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif"
-    fontSize: "clamp(32px, 3.2vw, 46px)"
-    fontWeight: 650
-    lineHeight: 1.1
-    letterSpacing: "-0.035em"
+    fontSize: "clamp(34px, 4.4vw, 60px)"
+    fontWeight: 700
+    lineHeight: 1.04
+    letterSpacing: "-0.03em"
   body:
-    fontFamily: "Bricolage Grotesque, Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif"
+    fontFamily: "-apple-system, SF Pro Text, Segoe UI, PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif"
     fontSize: "16px"
     fontWeight: 400
     lineHeight: 1.6
-  label:
-    fontFamily: "Bricolage Grotesque, Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif"
-    fontSize: "12px"
-    fontWeight: 550
-    lineHeight: 1.4
 rounded:
-  compact: "8px"
-  card: "16px"
-  feature: "23px"
-  pill: "100px"
-spacing:
-  tight: "8px"
-  compact: "16px"
-  content: "23px"
-  section-gap: "48px"
+  control: "999px"
+  card: "24px"
+  window: "22px"
+  inner: "12px"
 components:
   button-primary:
-    backgroundColor: "{colors.conversation-orange}"
-    textColor: "#29221d"
-    typography: "{typography.body}"
-    rounded: "{rounded.pill}"
-    padding: "8px 10px 8px 26px"
-    height: "60px"
-  button-primary-hover:
-    backgroundColor: "#ff8868"
-    textColor: "#29221d"
-    rounded: "{rounded.pill}"
-  button-compact:
-    backgroundColor: "{colors.ink}"
+    backgroundColor: "linear-gradient({colors.violet-deep}, {colors.violet})"
     textColor: "{colors.white}"
-    rounded: "{rounded.pill}"
-    padding: "10px 19px"
-    height: "44px"
-  button-open-source:
-    backgroundColor: "{colors.lime}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.pill}"
-    padding: "18px 26px"
-  scenario-tab:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.pill}"
-    padding: "13px 23px"
+    rounded: "{rounded.control}"
     height: "50px"
-  scenario-tab-selected:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.white}"
-    rounded: "{rounded.pill}"
+  button-quiet:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.ink}"
+    borderColor: "{colors.line}"
+    rounded: "{rounded.control}"
+    height: "50px"
 ---
 
 # Design System: LicoUp Website
 
 ## Overview
 
-**Creative North Star: "The Playful Conversation Magazine"**
+**North star: "Where people and agents talk."** LicoUp is presented as a
+communication product, not a developer tool. The page leads with a messenger in
+which people, agents and channels share one conversation, results arrive as
+content that can be passed on, and the person keeps control of context and
+approvals. The design language is modern, premium, concise and energetic:
+warm white space, confident type, deep and light violet with gold accents
+("purple clouds from the east, floating light and glinting gold"), soft
+layered depth and purposeful motion.
 
-LicoUp presents a consumer-facing local-agent client as an inviting editorial conversation. Expansive grotesque headlines, generous paper-colored space, warm calls to action, and soft sculptural forms make the page lively without making it noisy. The experience draws on expressive showcase sites while keeping navigation, download actions, examples, and answers immediately legible.
+The mascot is the friendly face of the brand, not the theme of the page. Copy
+does not lean on dessert wordplay; it describes user-experience capability.
 
-The visual world alternates open editorial space with contained pastel scenes. Conversation slips, hand-placed rotations, orbital marks, and an original abstract sculpture give the page a tactile character; restrained borders and deep ink keep those gestures grounded. The three-line hero names Agent Collaboration before resolving to the user's agency, while the approved LicoUp logo remains the stable brand anchor. Search-oriented category and guide pathways extend this existing world rather than creating a separate visual system.
+## Brand mark
 
-**Key Characteristics:**
+The mascot is **Lico**, LicoUp's resident agent: a smooth milk-white ice-cream
+scoop that glows softly like a small moon, with glossy navy eyes, a small smile
+and blush, two soft arms resting on the rim of a silicone-like waffle cup, and
+a lavender star worn as a hair clip. The material is a soft matte vinyl-toy
+finish without outlines or surface texture.
 
-- Oversized, tightly tracked bilingual headlines, including the category-led three-line hero.
-- Warm paper and deep ink, activated by tangerine and softened by lilac, mint, lime, blue, and peach scene fields.
-- Rounded cards and pill controls paired with slightly rotated paper-like inserts.
-- Original abstract conversation imagery rather than screenshots presented as product UI.
-- Open editorial link rows that move from recognizable questions into deeper category, use-case, security, and technical reading.
-- Rich but coherent motion with a complete paused and reduced-motion state.
+- `lico.js` renders Lico as a layered SVG character (head, eyes, brows, mouths,
+  blush, arms, clip and cup) and `lico.css` drives its moods: neutral, happy,
+  listening, thinking, speaking, sorry and sleepy. Idle breathing, blinking and
+  pointer-following eyes respect the pause control and reduced motion.
+  Flavour skins change only the scoop colours and accessories only the head
+  decoration; the face, arms and waffle cup stay the same. Shading uses
+  gradients rather than SVG filters so exports render the same in Flutter.
+- The same template renders the client's static expressions and square
+  avatar tiles; that preset pack and its export pipeline are owned and
+  distributed by the LicoUp client repository, not by this site.
+- On the homepage, Lico peeks over the messenger window with its cup hidden,
+  thinks while the agent types, cheers when the result is shared, and says
+  hello when clicked.
+
+**The One Mascot Rule.** Use the mascot as a single, deliberate presence per
+view. Never tile it, scatter it as decoration, or replace UI with it.
 
 ## Colors
 
-The palette combines warm near-white paper and garden-dark ink with a concentrated tangerine action color and quiet pastel scene fields.
+Warm near-white paper and white surfaces carry the page; deep ink is used for
+text. Violet is the brand accent: the primary button (a deep-violet gradient
+with a gold sheen on hover), your own messages, badges, selections and links.
+Gold is the glint: eyebrows, attention states such as approvals, the "Next"
+roadmap tag and the "Today" marker. The hero aurora mixes lilac and violet
+with a soft gold glow, a few gold glints twinkle slowly, and the second hero
+line fades from ink into violet and a soft orchid pink, matching the client. Green signals available or
+completed states.
 
-### Primary
-
-- **Conversation Tangerine:** The high-energy fill for primary download controls and small illustrated accents.
-- **Grounded Terracotta:** The stronger text accent used in the hero, logo punctuation, navigation feedback, and FAQ hover states.
-
-### Secondary
-
-- **Conversation Lilac:** A soft field for the hero artwork and agent-oriented details.
-- **Fresh Mint:** A quiet hover and ambient surface color.
-- **Optimistic Lime:** The open-source call to action, dark-section headline accent, and selection highlight.
-
-### Neutral
-
-- **Warm Paper:** The page canvas and the light text color on the open-source band.
-- **Clear White:** Conversation windows and other clean foreground sheets.
-- **Deep Garden Ink:** Primary text, selected scenario tabs, compact header actions, and the open-source band.
-- **Muted Olive Ink:** Supporting copy, captions, notes, and secondary metadata.
-- **Soft Botanical Line:** Dividers, FAQ rules, and low-emphasis outlines.
-
-### Named Rules
-
-**The Warm Action Rule.** Reserve tangerine for the main user action and small moments of emphasis; broad content surfaces stay neutral or pastel.
-
-**The Pastel Scene Rule.** Lilac, mint, lime, pale blue, and peach belong to bounded illustration or demonstration fields, where they distinguish scenes without competing with the primary action.
+**The Violet and Gold Rule.** Violet leads, gold highlights. Keep gold small
+and luminous; never use orange or large saturated fields.
 
 ## Typography
 
-**Display Font:** Bricolage Grotesque (with Noto Sans SC and system sans-serif fallbacks)  
-**Body Font:** Bricolage Grotesque (with Noto Sans SC and system sans-serif fallbacks)
-
-**Character:** Bricolage Grotesque supplies broad, expressive shapes for the English voice, while the locally served Noto Sans SC subset keeps the Chinese experience equally clear. One shared stack and consistent weights make language changes feel like the same brand rather than a separate layout.
-
-### Hierarchy
-
-- **Display:** The three-line hero uses `clamp(60px, 6.2vw, 88px)`, a strong medium weight, tight tracking, and near-solid leading. Below 900px it contracts to `clamp(40px, 6.2vw, 57px)`; on phones it recomposes at `clamp(43px, 11.7vw, 66px)` for both languages so the category statement remains prominent without colliding with the artwork.
-- **Headline:** Section statements use a fluid scale, balanced wrapping, tight tracking, and compact leading.
-- **Title:** Feature headings use a smaller fluid scale with the same weight and tracking as section headings.
-- **Body:** Supporting copy uses comfortable leading and constrained measures, typically around 425–500px, so the generous layout remains easy to scan.
-- **Label:** Navigation, captions, release notes, annotations, and supporting metadata use compact sizes with medium emphasis rather than uppercase styling.
-
-### Named Rules
-
-**The Intentional Line Break Rule.** The category hero resolves in three short lines; major section headlines use two when the copy supports it. Color may shift one line, but type family, weight, and rhythm stay continuous.
-
-**The One Bilingual Voice Rule.** English and Chinese use the same hierarchy and component geometry, with Noto Sans SC providing the Chinese glyph coverage inside the shared stack.
+Bricolage Grotesque sets display type at a medium weight with moderate
+tracking; Chinese headlines use slightly open tracking and more leading so
+large type stays comfortable. Body copy uses the platform UI font for crisp
+reading. The locally served Noto Sans SC subset
+provides Chinese display glyphs and is refreshed whenever Chinese copy adds
+characters. English and Chinese share one hierarchy and composition.
 
 ## Layout
 
-The main content column is capped at 1328px with 48px desktop gutters. The hero is wider, capped at 1440px, and pairs copy with a near-equal artwork column; its asymmetric left inset lets the sculpture meet the viewport edge on ordinary desktop widths. Editorial sections use generous vertical spacing, alternating two-column headings, demonstration stages, and balanced feature rows.
+Content is capped at 1200px with 32px gutters (20px below 880px). The homepage
+reads as: centred hero with the messenger concept preview, agent strip,
+capabilities available today, a scroll-lit statement, a Now / Next / Later
+roadmap, guides, FAQ and a closing call to action. At 1100px the messenger drops
+its member panel, at 880px navigation becomes a menu and card grids stack, and
+at 720px the messenger shows only the conversation.
 
-At 1199px, gutters and hero spacing tighten. At 899px, navigation becomes a menu-controlled stacked region, the three-line hero contracts, and dense demonstration and reading content receives smaller internal padding. At 600px, the hero becomes a vertical sequence with copy before a contained artwork field, the value links wrap, question pathways and the guide spread become single columns, feature rows stack, the second feature reverses so its artwork still leads, the open-source band becomes a single-column composition, and the FAQ becomes one column. Mobile gutters settle at 23px while the hero art keeps a contained 12px outer margin.
+Guide pages share the tokens, the mark and neutral white cards through
+`content.css`.
 
-The homepage reading path begins with a static three-link value strip, then pairs visible user questions with deep links to use cases, coding-agent interface guidance, and security. A pale-lilac category guide anchors the later reading spread beside a ruled list of coding-agent, orchestration, and architecture articles. A compact directory completes the path to product, use cases, security, and current availability. These are ordinary crawlable links and readable HTML rather than script-generated navigation.
+## The messenger concept preview
 
-Product guides use the same paper, ink, typography, rounded surfaces, and approved logo. Their document navigation wraps naturally on small screens, identifies the current page, and remains usable without JavaScript. Long tables scroll inside their own containers. The existing guide URLs and English factual content remain available. The compatibility overview combines the available download with one adapter table and practical setup requirements.
+The client front end is being redesigned, so the site shows a drawn, clearly
+labelled concept of the experience instead of product screenshots. The
+conversation "Launch crew" includes people (Mia, Leo), agents (Claude Code,
+Codex) and channels. The scripted scene demonstrates the mention picker, an
+explicit approval, an agent result delivered as a content card, a teammate's
+reply, and sharing that card to two destinations. Without JavaScript, or when
+motion is paused or reduced, the finished conversation is shown statically.
 
-No-JavaScript rendering preserves the full navigation and first conversation example. Language, motion, menu, and scenario controls only appear when scripting makes them functional.
+**The Honest Preview Rule.** Every concept of future capability is labelled.
+The hero note and the roadmap state that today's release connects local agents
+and that messaging with people is roadmap work.
 
-### Named Rules
+## Depth and shape
 
-**The Editorial Alternation Rule.** Move between generous text-led space and bounded visual scenes; avoid a continuous grid of identical cards.
+Structural content is flat with 1px warm hairlines. Floating layers (the
+messenger window, popovers, cards on hover) use layered, low-contrast shadows.
+Controls are full pills; cards use 24px radii, the window 22px, nested elements
+10–14px.
 
-**The Mobile Recomposition Rule.** Preserve the reading and action order by stacking whole compositions, not by merely shrinking the desktop columns.
+## Motion
 
-## Elevation & Depth
-
-Depth is selective and ambient. The page canvas, navigation, FAQ, and most editorial text remain flat; shadows appear under floating conversation slips, the white conversation window, the tilted logo core, local labels, and the choice card. Pastel background fields, clipping, overlap, and rotation provide most of the hierarchy before shadow is introduced.
-
-### Shadow Vocabulary
-
-- **Floating Slip** (`0 12px 32px -15px #412b6173`): A purple-tinted diffuse shadow supports message slips over the lilac hero field.
-- **Conversation Window** (`0 26px 70px -38px #34432386`): A broad olive-tinted shadow separates the main white demonstration sheet from its pastel stage.
-- **Object Lift** (`0 17px 35px -15px #576e7166`, `0 9px 22px -12px #52738b55`, and `0 23px 40px -25px #5b342d77`): Smaller blue-gray and warm-brown shadows lift illustrated labels, the logo core, and the choice card from their scenes.
-
-### Named Rules
-
-**The Flat Editorial Rule.** Keep structural content flat; use shadows only when an object is visibly floating inside an illustration or demonstration scene.
-
-## Shapes
-
-The base surface radius is a gently rounded 16px. Small interface layers range from 8px to 15px, while signature icon tiles reach 19px to 23px. Buttons, compact labels, language controls, scroll cues, status marks, avatars, and orbital forms use complete pills or circles. Conversation bubbles may use one tighter corner to suggest direction.
-
-Slight rotations make selected cards and slips feel hand placed. Large decorative geometry uses open loops, quiet arcs, small divider dots, and rounded conversation sculpture. A small sparkle is reserved for the Make something scene and its idea card; it is not repeated as page decoration. These forms remain secondary to text and never replace the unchanged LicoUp logo.
-
-### Named Rules
-
-**The Soft Geometry Rule.** Combine rounded rectangles with circles and orbital marks; sharp rectangles are limited to divider lines and typographic alignment.
-
-**The Stable Logo Rule.** Keep the approved LicoUp logo artwork unchanged. The browser favicon clips the same artwork to a rounded rectangle with transparent corners, using a radius of about 19% of its width. Expression comes from its surrounding scene, scale, and placement.
-
-## Components
-
-### Buttons
-
-Buttons feel tactile, friendly, and decisive.
-
-- **Shape:** Full capsule silhouette with a 60px minimum height for the main action; the embedded dark circular disc reinforces direction.
-- **Primary:** Tangerine fill, deep ink text, asymmetric horizontal padding, and a separate dark arrow disc. It is used for the macOS download action in the hero and closing section.
-- **Hover / Focus:** Hover lifts the capsule by 3px, warms the fill, and nudges the icon. Active returns it to the baseline with a slight scale compression. Keyboard focus uses a visible purple outline with generous offset.
-- **Compact:** The header download action uses a 44px deep-ink capsule with white text.
-- **Open Source:** The dark open-source band uses a lime capsule with deep ink text and paired icons.
-- **Text Link:** Secondary actions use underlined text and a diagonal or forward icon nudge rather than a filled surface.
-
-### Chips
-
-Scenario controls behave like friendly segmented choices rather than utility filters.
-
-- **Style:** Desktop tabs are outlined pills with icons and a 50px minimum height. Mobile tabs become compact rounded tiles with vertically stacked icon and label.
-- **State:** The selected scenario fills with deep ink and white text. Hover introduces a light botanical surface and a small upward lift.
-
-### Reading Pathways
-
-The value strip is a static row of three icon-led links for conversation continuity, chosen context, and human decisions. Question pathways remain open ruled rows rather than boxed cards; each begins with a recognizable problem and links directly to the relevant anchored answer. The guide spread uses one pale-lilac primary guide beside a border-led reading list, followed by a compact directory of supporting pages.
-
-### Cards / Containers
-
-Cards resemble clean paper sheets inside softly colored editorial scenes.
-
-- **Corner Style:** Main stages and conversation windows use the base 16px radius; nested callouts step down to 10–12px.
-- **Background:** White is reserved for the primary conversation sheet and selected floating slips; pastel fields organize the surrounding scenes.
-- **Shadow Strategy:** Use ambient shadow only for visibly floating layers, following the Flat Editorial Rule.
-- **Border:** Dividers and quiet outlines use the botanical line color; card perimeters generally rely on contrast and clipping.
-- **Internal Padding:** Desktop demonstration content is spacious, then tightens substantially below the tablet and phone breakpoints.
-
-### Navigation
-
-Desktop navigation is a single horizontal line of compact medium-weight links. Hover draws a terracotta underline from left to right. Below 900px, the menu control reveals a full-width vertical link list with quiet divider rules; Escape closes it and returns focus. The language control is a circular 44px target with a mint hover field.
-
-### Conversation Stage
-
-Three Make something, Learn something, and Pick it back up scenarios share one demonstration stage and one visual grammar. Selecting a scenario updates the tinted field and displayed conversation sheet; the panel enters with a short vertical fade. With JavaScript unavailable, the tabs remain hidden and the first illustrative conversation remains readable.
-
-### FAQ
-
-FAQ rows are full-width native disclosure elements separated by fine rules. The plus icon rotates 45 degrees when a row opens, the question shifts to terracotta on hover, and the answer stays in muted ink with relaxed leading. The entire summary remains a keyboard and touch target.
-
-### Motion
-
-Hero lines reveal once, content sections arrive once as they enter view, and scenario panels use a short transition on demand. Floating message slips move slowly and the open-source orbit turns over a long cycle. Pointer parallax is limited to fine-pointer devices and is scheduled with animation frames. The value strip and reading pathways remain static. A footer control pauses motion, hidden-page and paused states cancel transient work, and the system reduced-motion preference disables animation, transitions, smooth scrolling, and parallax.
+Motion is smooth and purposeful: hero lines rise once, a slow aurora drifts,
+the messenger window flattens from a slight tilt as it scrolls into view,
+sections fade up once, capability vignettes loop quietly, and the statement
+lights word by word with scroll. The messenger script runs only while visible
+and cancels on pause, language change or hidden tabs. A footer control pauses
+all animation; the reduced-motion preference disables animation, transitions,
+smooth scrolling and pointer effects.
 
 ## Do's and Don'ts
 
-### Do:
-
-- **Do** preserve the unchanged LicoUp logo as the stable brand anchor.
-- **Do** pair expressive headlines with short line lengths, generous space, and restrained supporting copy.
-- **Do** keep primary download actions tangerine and reserve lime for the open-source action on deep ink.
-- **Do** use original abstract illustration and clearly illustrative conversation scenes.
-- **Do** keep English and Chinese within one hierarchy and responsive composition.
-- **Do** make motion optional, capability-aware, and absent under reduced-motion settings.
-
-### Don't:
-
-- **Don't** turn every section into the same card grid or apply shadow to structural content.
-- **Don't** spread tangerine across large background fields or let pastel scenes compete with the primary action.
-- **Don't** present the abstract sculpture or synthetic conversation as literal product UI.
-- **Don't** replace, redraw, or embellish the LicoUp logo artwork.
-- **Don't** depend on JavaScript for navigation, core copy, the first example, or download access.
-- **Don't** run pointer-driven motion on coarse pointers or when motion is paused or reduced.
+- **Do** lead with communication: people, agents, shared results and control.
+- **Do** keep copy short and capability-led; let the preview show the product.
+- **Do** label concepts and roadmap items honestly.
+- **Don't** use orange accents, sprinkles, stickers, heavy outlines or hard offset shadows.
+- **Don't** frame LicoUp as a pure coding tool or lean on "sweet" wordplay.
+- **Don't** depend on JavaScript for navigation, copy, the FAQ or downloads.

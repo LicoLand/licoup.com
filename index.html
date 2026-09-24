@@ -3,163 +3,319 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f9f5">
-  <title data-en="LicoUp — Local-first Agent Collaboration" data-zh="LicoUp — 本地优先的人与智能体协作">LicoUp — Local-first Agent Collaboration</title>
-  <meta name="description" content="An open-source Human-Agent Collaboration Client. Explore local AI agent conversations, context and approvals, coding-agent interfaces, and the macOS download." data-en="An open-source Human-Agent Collaboration Client. Explore local AI agent conversations, context and approvals, coding-agent interfaces, and the macOS download." data-zh="LicoUp 是开源、本地优先的人与智能体协作客户端。探索持续对话、上下文与授权、AI 编码智能体接口，并下载 macOS 版本。">
+  <meta name="theme-color" content="#f3efff">
+  <title data-en="LicoUp — People. Agents. One conversation." data-zh="LicoUp — 人与智能体，同频对话">LicoUp — People. Agents. One conversation.</title>
+  <meta name="description" content="LicoUp is an open-source, local-first Human-Agent Collaboration Client growing into a messenger for people and AI agents. Available for macOS with 13 built-in agent adapters." data-en="LicoUp is an open-source, local-first Human-Agent Collaboration Client growing into a messenger for people and AI agents. Available for macOS with 13 built-in agent adapters." data-zh="LicoUp 是开源、本地优先的人与智能体协作客户端，正在成长为人与 AI 智能体共同使用的通讯软件。现已提供 macOS 版，内置 13 种智能体适配器。">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://licoup.com/">
   <meta property="og:site_name" content="LicoUp">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="LicoUp — Local-first Agent Collaboration" data-en="LicoUp — Local-first Agent Collaboration" data-zh="LicoUp — 本地优先的人与智能体协作">
-  <meta property="og:description" content="An open-source Human-Agent Collaboration Client. Explore local AI agent conversations, context and approvals, coding-agent interfaces, and the macOS download." data-en="An open-source Human-Agent Collaboration Client. Explore local AI agent conversations, context and approvals, coding-agent interfaces, and the macOS download." data-zh="LicoUp 是开源、本地优先的人与智能体协作客户端。探索持续对话、上下文与授权、AI 编码智能体接口，并下载 macOS 版本。">
+  <meta property="og:title" content="LicoUp — People. Agents. One conversation." data-en="LicoUp — People. Agents. One conversation." data-zh="LicoUp — 人与智能体，同频对话">
+  <meta property="og:description" content="An open-source messenger in the making for people and AI agents: share context, pass work along, stay in control. Available for macOS." data-en="An open-source messenger in the making for people and AI agents: share context, pass work along, stay in control. Available for macOS." data-zh="正在成长中的开源人机协同通讯软件：共享上下文、接力协作，每一步由你掌控。现已提供 macOS 版。">
   <meta property="og:url" content="https://licoup.com/">
-  <meta property="og:image" content="https://licoup.com/assets/conversation-sculpture.jpg">
+  <meta property="og:image" content="https://licoup.com/assets/og-card.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="LicoUp — Local-first Agent Collaboration" data-en="LicoUp — Local-first Agent Collaboration" data-zh="LicoUp — 本地优先的人与智能体协作">
-  <meta name="twitter:description" content="An open-source Human-Agent Collaboration Client. Explore local AI agent conversations, context and approvals, coding-agent interfaces, and the macOS download." data-en="An open-source Human-Agent Collaboration Client. Explore local AI agent conversations, context and approvals, coding-agent interfaces, and the macOS download." data-zh="LicoUp 是开源、本地优先的人与智能体协作客户端。探索持续对话、上下文与授权、AI 编码智能体接口，并下载 macOS 版本。">
+  <meta name="twitter:title" content="LicoUp — People. Agents. One conversation." data-en="LicoUp — People. Agents. One conversation." data-zh="LicoUp — 人与智能体，同频对话">
+  <meta name="twitter:description" content="An open-source messenger in the making for people and AI agents: share context, pass work along, stay in control. Available for macOS." data-en="An open-source messenger in the making for people and AI agents: share context, pass work along, stay in control. Available for macOS." data-zh="正在成长中的开源人机协同通讯软件：共享上下文、接力协作，每一步由你掌控。现已提供 macOS 版。">
   <link rel="preload" href="/assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/home.css">
+  <link rel="stylesheet" href="/lico.css">
+  <script src="/lico.js" defer></script>
   <script src="/script.js" defer></script>
 </head>
 <body>
-<!-- THESIS: Agent collaboration becomes an approachable path from a real question to a useful conversation and a deeper answer.
-OWN-WORLD: Tangerine, periwinkle, pale blue and deep ink; sculptural conversation forms, expansive grotesque type, tactile controls.
-STORY: Understand the category, recognize a task, explore an illustrative conversation, read the relevant guide, and check the macOS release.
-FIRST VIEWPORT: A category-led three-line headline pairs with the approved conversation sculpture, floating messages, a concise product definition, and download and experience actions.
-FORM: Extend the established conversation magazine (seed d4f075ad) with open problem-to-guide rows and a lilac reading feature. Signature interaction: three useful conversation scenes share one stage.
-FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
 <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到主要内容">Skip to content</a>
 <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
-  <symbol id="i-external" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
-  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v16m-6-6 6 6 6-6"/></symbol>
-  <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7Z"/></symbol>
-  <symbol id="i-agent" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="14" rx="5"/><path d="M12 3v3m-4 6v1m8-1v1m-7 4h6"/></symbol>
-  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-8 8H4l1.8-3.1A8 8 0 1 1 20 11.5Z"/><path d="M8 10h8m-8 4h5"/></symbol>
-  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6v15m0-15C9 3 5 3 2 4v15c4-1 7-1 10 2 3-3 6-3 10-2V4c-3-1-7-1-10 2Z"/></symbol>
-  <symbol id="i-plan" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 10h18m-13 5 3 3 5-5"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
-  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 19V5m-6 6 6-6 6 6"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3m-4 4 4-4 4 4M5 12v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></symbol>
+  <symbol id="i-hash" viewBox="0 0 24 24"><path d="M5 9h14M5 15h14M10 4 8 20M16 4l-2 16"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a5.5 5.5 0 0 1 3.5 6"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7Z"/></symbol>
   <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6v12m6-12v12"/></symbol>
   <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-1.7-.5-2.3 3-.3 6-1.4 6-6.4 0-1.3-.4-2.3-1.2-3.2.1-.3.5-1.6-.1-3.1 0 0-1-.3-3.3 1.2a11.5 11.5 0 0 0-6 0C6.6 2.7 5.6 3 5.6 3 5 4.5 5.4 5.8 5.5 6.1c-.8.9-1.2 1.9-1.2 3.2 0 5 3 6.1 6 6.4-.5.5-.6 1.2-.6 2.3v4"/></symbol>
 </svg>
-<header class="site-header">
-  <a class="brand" href="/" aria-label="LicoUp home" data-aria-en="LicoUp home" data-aria-zh="LicoUp 首页"><img src="/assets/licoup-logo.svg" alt="" width="44" height="44"><span>LicoUp<span class="brand-period">.</span></span></a>
-  <nav class="nav-menu" id="nav-menu" aria-label="Main navigation" data-aria-en="Main navigation" data-aria-zh="主要导航">
-    <a href="#try-it" data-en="Explore" data-zh="探索体验">Explore</a>
-    <a href="#why-licoup" data-en="Why LicoUp" data-zh="为什么选择 LicoUp">Why LicoUp</a>
-    <a href="#guides" data-en="Guides" data-zh="协作指南">Guides</a>
-  </nav>
-  <div class="header-actions">
-    <button class="language-toggle" id="language-toggle" type="button" aria-label="切换到中文">中文</button>
-    <a class="button button-small header-source" href="https://github.com/LicoLand/LicoUp/releases/download/v0.1.2/LicoUp-macos-arm64.dmg"><span data-en="Download for Mac" data-zh="下载 Mac 版">Download for Mac</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
-    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"><span data-menu-label>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="LicoUp home" data-aria-en="LicoUp home" data-aria-zh="LicoUp 首页"><img src="/assets/licoup-mark.svg" alt="" width="36" height="36"><span>LicoUp</span></a>
+    <nav class="nav-menu" id="nav-menu" aria-label="Main navigation" data-aria-en="Main navigation" data-aria-zh="主要导航">
+      <a href="#today" data-en="Features" data-zh="功能">Features</a>
+      <a href="#roadmap" data-en="Roadmap" data-zh="路线图">Roadmap</a>
+      <a href="#guides" data-en="Guides" data-zh="指南">Guides</a>
+      <a href="#faq" data-en="FAQ" data-zh="问答">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <button class="language-toggle" id="language-toggle" type="button" aria-label="切换到中文">中文</button>
+      <a class="icon-button" href="https://github.com/LicoLand/LicoUp" aria-label="LicoUp on GitHub" data-aria-en="LicoUp on GitHub" data-aria-zh="在 GitHub 查看 LicoUp"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a>
+      <a class="button button-dark button-small" href="https://github.com/LicoLand/LicoUp/releases/download/v0.1.2/LicoUp-macos-arm64.dmg"><span data-en="Download" data-zh="下载">Download</span></a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"><span class="visually-hidden" data-menu-label>Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
+    </div>
   </div>
 </header>
+
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
+    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="glints" aria-hidden="true">
+      <i style="--x:14%;--y:24%;--d:0s"></i><i style="--x:26%;--y:62%;--d:-1.4s"></i><i style="--x:41%;--y:12%;--d:-2.6s"></i>
+      <i style="--x:63%;--y:20%;--d:-.8s"></i><i style="--x:78%;--y:46%;--d:-3.1s"></i><i style="--x:88%;--y:16%;--d:-1.9s"></i><i style="--x:70%;--y:70%;--d:-2.2s"></i>
+    </div>
     <div class="hero-copy">
+      <a class="hero-pill" href="https://github.com/LicoLand/LicoUp/releases/tag/v0.1.2"><span class="pill-dot" aria-hidden="true"></span><span data-en="v0.1.2 is out for macOS" data-zh="macOS 版 v0.1.2 已发布">v0.1.2 is out for macOS</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <h1 id="hero-title">
-        <span class="hero-line" data-en="Agent" data-zh="与智能体">Agent</span>
-        <span class="hero-line" data-en="collaboration." data-zh="一起创造，">collaboration.</span>
-        <span class="hero-line accent-line" data-en="Your way." data-zh="由你掌舵。">Your way.</span>
+        <span class="line"><span data-en="People. Agents." data-zh="人与智能体，">People. Agents.</span></span>
+        <span class="line accent"><span data-en="One conversation." data-zh="同频对话。">One conversation.</span></span>
       </h1>
-      <p class="hero-description" data-en="An open-source, local-first Human-Agent Collaboration Client. Bring your ideas to local AI agents, keep the conversation going, and stay in control of what happens next." data-zh="LicoUp 是开源、本地优先的人与智能体协作客户端。带着想法与本地 AI 智能体交流，让对话持续，让每一步选择都掌握在你手中。">An open-source, local-first Human-Agent Collaboration Client. Bring your ideas to local AI agents, keep the conversation going, and stay in control of what happens next.</p>
-      <div class="hero-actions"><a class="button button-primary" href="https://github.com/LicoLand/LicoUp/releases/download/v0.1.2/LicoUp-macos-arm64.dmg"><span data-en="Download for macOS" data-zh="下载 macOS 版">Download for macOS</span><span class="button-disc"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a><a class="text-link" href="#try-it"><span data-en="Explore the experience" data-zh="探索协作体验">Explore the experience</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div>
-      <p class="hero-note"><span class="status-mark" aria-hidden="true"></span><a href="https://github.com/LicoLand/LicoUp/releases/tag/v0.1.2" data-en="v0.1.2 · macOS · Apple silicon" data-zh="v0.1.2 · macOS · Apple 芯片">v0.1.2 · macOS · Apple silicon</a></p>
+      <p class="hero-lede" data-en="An open-source messenger where people and AI agents share context, pass work along and deliver results where they belong. You stay in control." data-zh="开源的人机协同通讯软件。人与 AI 智能体共享上下文、接力协作，把成果送到该去的地方。每一步，都由你掌控。">An open-source messenger where people and AI agents share context, pass work along and deliver results where they belong. You stay in control.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://github.com/LicoLand/LicoUp/releases/download/v0.1.2/LicoUp-macos-arm64.dmg"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg><span data-en="Download for macOS" data-zh="下载 macOS 版">Download for macOS</span></a>
+        <a class="button button-quiet" href="https://github.com/LicoLand/LicoUp"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span data-en="View on GitHub" data-zh="在 GitHub 查看">View on GitHub</span></a>
+      </div>
+      <p class="hero-note" data-en="Today: 13 local agents on Macs with Apple silicon. Messaging with people is on the roadmap." data-zh="当前：Apple 芯片 Mac 上的 13 种本地智能体。与真人的通讯功能在路线图中。">Today: 13 local agents on Macs with Apple silicon. Messaging with people is on the roadmap.</p>
     </div>
-    <div class="hero-stage" id="hero-stage">
-      <picture class="hero-art" id="hero-art"><source media="(max-width: 600px)" srcset="/assets/conversation-sculpture-small.jpg"><img src="/assets/conversation-sculpture.jpg" width="960" height="1200" alt="" fetchpriority="high"></picture>
-      <div class="floating-message floating-message-one" aria-hidden="true"><span data-en="A thought worth sharing." data-zh="一个值得分享的想法。">A thought worth sharing.</span></div>
-      <div class="floating-message floating-message-two" aria-hidden="true"><span data-en="A next step, together." data-zh="下一步，一起向前。">A next step, together.</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></div>
-      <span class="art-caption" data-en="Your ideas. Your agents. Your say." data-zh="你的想法，你的智能体，你来决定。">Your ideas. Your agents. Your say.</span>
-    </div>
-    <a class="hero-scroll" href="#try-it" aria-label="Explore the conversation examples" data-aria-en="Explore the conversation examples" data-aria-zh="探索对话示例"><svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a>
-  </section>
-  <div class="value-strip section-wrap" aria-label="Built around you" data-aria-en="Built around you" data-aria-zh="围绕你的协作体验">
-    <a href="/product/"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span data-en="Conversations that continue" data-zh="能够接续的对话">Conversations that continue</span></a>
-    <a href="/security/"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span data-en="Context you choose to share" data-zh="自主选择分享的上下文">Context you choose to share</span></a>
-    <a href="/human-agent-collaboration-client/"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-en="Your decisions in the loop" data-zh="你的决定，始终在场">Your decisions in the loop</span></a>
-  </div>
-  <section class="pathways section-wrap" id="why-licoup" aria-labelledby="pathways-title">
-    <div class="pathways-heading reveal">
-      <h2 id="pathways-title"><span data-en="Less starting over." data-zh="少一点重复开始，">Less starting over.</span><br><span class="serene-word" data-en="More moving forward." data-zh="多一点向前推进。">More moving forward.</span></h2>
-      <p data-en="An idea becomes a project. One question leads to another. Give the conversation, the context, and your decisions a place to stay connected." data-zh="想法慢慢变成项目，一个问题引出下一个问题。让对话、上下文和你的决定，有一个彼此连接的地方。">An idea becomes a project. One question leads to another. Give the conversation, the context, and your decisions a place to stay connected.</p>
-    </div>
-    <div class="pathway-list reveal">
-      <a class="pathway" href="/use-cases/#creative-work"><div><h3 data-en="An idea with too many loose ends?" data-zh="想法很多，却不知从哪里开始？">An idea with too many loose ends?</h3><p data-en="Start with a shared brief. Keep the goal, the decisions, and the next step in view." data-zh="从一份共同的任务说明开始，让目标、已有决定和下一步清晰可见。">Start with a shared brief. Keep the goal, the decisions, and the next step in view.</p><span class="pathway-action" data-en="Explore everyday use cases" data-zh="探索日常协作场景">Explore everyday use cases</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      <a class="pathway" href="/guides/ai-coding-agents/#quick-read"><div><h3 data-en="Different agents. Different ways in?" data-zh="不同的智能体，各有各的用法？">Different agents. Different ways in?</h3><p data-en="Understand how coding-agent interfaces handle sessions, context, and approvals before choosing your workflow." data-zh="先了解编码智能体如何处理会话、上下文与授权，再选择适合你的工作方式。">Understand how coding-agent interfaces handle sessions, context, and approvals before choosing your workflow.</p><span class="pathway-action" data-en="Compare AI coding-agent interfaces" data-zh="比较 AI 编码智能体接口">Compare AI coding-agent interfaces</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      <a class="pathway" href="/security/"><div><h3 data-en="What does your agent get to see?" data-zh="智能体究竟能看到什么？">What does your agent get to see?</h3><p data-en="Make context sharing and local actions deliberate, with clear privacy and approval boundaries." data-zh="明确上下文分享与本地操作的边界，让隐私与授权成为清楚的选择。">Make context sharing and local actions deliberate, with clear privacy and approval boundaries.</p><span class="pathway-action" data-en="Understand privacy and control" data-zh="了解隐私与控制">Understand privacy and control</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    </div>
-  </section>
-  <section class="experience section-wrap" id="try-it" aria-labelledby="experience-title">
-    <div class="section-heading reveal"><h2 id="experience-title"><span data-en="Bring something" data-zh="带上一个想法，">Bring something</span><br><span class="serene-word" data-en="you care about." data-zh="一起把它往前推。">you care about.</span></h2><p data-en="A project to make, a question to explore, a task to pick up again. See how a conversation can give your next step a little more shape." data-zh="想做的项目、想弄懂的问题、想继续的任务。看看一段对话，怎样让下一步变得更清晰。">A project to make, a question to explore, a task to pick up again. See how a conversation can give your next step a little more shape.</p></div>
-    <div class="demo-tabs" id="demo-tabs" role="tablist" aria-label="Conversation examples" data-aria-en="Conversation examples" data-aria-zh="对话示例">
-      <button id="tab-make" type="button" role="tab" aria-selected="true" aria-controls="panel-make" data-scenario="make"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg><span data-en="Make something" data-zh="创造点什么">Make something</span></button>
-      <button id="tab-learn" type="button" role="tab" aria-selected="false" aria-controls="panel-learn" tabindex="-1" data-scenario="learn"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span data-en="Learn something" data-zh="弄懂一个问题">Learn something</span></button>
-      <button id="tab-plan" type="button" role="tab" aria-selected="false" aria-controls="panel-plan" tabindex="-1" data-scenario="plan"><svg class="icon" aria-hidden="true"><use href="#i-plan"/></svg><span data-en="Pick it back up" data-zh="继续上次的任务">Pick it back up</span></button>
-    </div>
-    <div class="demo-stage reveal">
-      <div class="demo-margin-note"><span data-en="A shared starting point." data-zh="从共同的起点出发。">A shared starting point.</span><svg viewBox="0 0 100 80" aria-hidden="true"><path d="M5 8C80-5 100 65 35 62m13-13L33 63l17 8"/></svg></div>
-      <div class="conversation-window">
-        <div class="window-top"><div class="window-brand"><img src="/assets/licoup-logo.svg" alt="" width="30" height="30"><span>LicoUp</span></div><span class="demo-indicator" data-en="A conversation, imagined" data-zh="一段想象中的对话">A conversation, imagined</span><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></div>
-        <div id="panel-make" class="conversation-panel" role="tabpanel" aria-labelledby="tab-make" tabindex="0">
-          <div class="message message-human"><span class="message-author" data-en="You" data-zh="你">You</span><p data-en="I have an idea for a weekend project. Help me turn it into something I can start." data-zh="我有个想在周末做的小项目，帮我把它变成能开始行动的计划。">I have an idea for a weekend project. Help me turn it into something I can start.</p></div>
-          <div class="message message-agent"><span class="agent-avatar" aria-hidden="true"><svg class="icon"><use href="#i-agent"/></svg></span><div><span class="message-author" data-en="Your agent" data-zh="你的智能体">Your agent</span><p data-en="Let&#x27;s give it a clear brief: who is it for, what should it do, and what is the smallest useful first version?" data-zh="先整理一份清晰的任务说明：为谁而做、要解决什么问题、第一版最需要完成什么？">Let's give it a clear brief: who is it for, what should it do, and what is the smallest useful first version?</p><div class="idea-slip"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg><div><strong data-en="An idea we can build on." data-zh="让想法有个共同的起点。">An idea we can build on.</strong><span data-en="One audience. One useful outcome. One next step." data-zh="明确受众、期待的结果，以及下一步。">One audience. One useful outcome. One next step.</span></div></div></div></div>
-          <div class="conversation-end"><span class="end-line"></span><span data-en="Next: choose the first task together." data-zh="接下来，一起决定先做哪件事。">Next: choose the first task together.</span><span class="end-line"></span></div>
+
+    <figure class="demo" id="demo">
+      <div class="demo-stage" id="demo-stage">
+        <div class="app-frame" id="app-frame">
+        <button class="peek" id="peek" type="button" aria-label="Say hi to Lico" data-aria-en="Say hi to Lico" data-aria-zh="和 Lico 打个招呼">
+          <span class="peek-bubble" id="peek-bubble" aria-hidden="true" data-en="Hi there!" data-zh="你好呀！">Hi there!</span>
+          <span class="peek-lico" id="peek-lico" data-lico data-look aria-hidden="true"></span>
+        </button>
+
+        <div class="app" id="app">
+          <aside class="app-side">
+            <div class="side-top"><span class="traffic" aria-hidden="true"><i></i><i></i><i></i></span></div>
+            <div class="side-search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span data-en="Search" data-zh="搜索">Search</span></div>
+            <ul class="chat-list">
+              <li class="is-active"><span class="av av-group"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span><span class="cl-text"><strong data-en="Launch crew" data-zh="发布小队">Launch crew</strong><span data-en="Claude Code: Draft is ready" data-zh="Claude Code：草稿好了">Claude Code: Draft is ready</span></span></li>
+              <li><span class="av av-mia">M</span><span class="cl-text"><strong>Mia Chen</strong><span data-en="Sounds good!" data-zh="好呀！">Sounds good!</span></span><b class="badge">2</b></li>
+              <li><span class="av av-cc">C</span><span class="cl-text"><strong>Claude Code <em class="tag">AI</em></strong><span data-en="Plan updated" data-zh="计划已更新">Plan updated</span></span></li>
+              <li><span class="av av-channel"><svg class="icon" aria-hidden="true"><use href="#i-hash"/></svg></span><span class="cl-text"><strong>announcements</strong><span data-en="v2.3 is live" data-zh="v2.3 已上线">v2.3 is live</span></span></li>
+              <li><span class="av av-cx">X</span><span class="cl-text"><strong>Codex <em class="tag">AI</em></strong><span data-en="Review done" data-zh="审查完成">Review done</span></span></li>
+              <li><span class="av av-leo">L</span><span class="cl-text"><strong>Leo Park</strong><span data-en="See you at 3" data-zh="三点见">See you at 3</span></span></li>
+            </ul>
+          </aside>
+
+          <div class="app-main">
+            <div class="chat-head">
+              <div><strong data-en="Launch crew" data-zh="发布小队">Launch crew</strong><span data-en="3 people · 2 agents" data-zh="3 位成员 · 2 个智能体">3 people · 2 agents</span></div>
+              <div class="stack" aria-hidden="true"><b class="av av-mia">M</b><b class="av av-leo">L</b><b class="av av-cc">C</b><b class="av av-cx">X</b></div>
+            </div>
+            <div class="chat-log" id="chat-log">
+              <div class="msg" data-step="ask">
+                <b class="av av-mia" aria-hidden="true">M</b>
+                <div class="bubble"><span class="who">Mia</span><p data-en="Can we get release notes out today?" data-zh="今天能把更新说明发出去吗？">Can we get release notes out today?</p></div>
+              </div>
+              <div class="msg msg-me" data-step="mention">
+                <div class="bubble">
+                  <p data-lang="en"><mark>@Claude Code</mark> draft them from this week's changes.</p>
+                  <p data-lang="zh"><mark>@Claude Code</mark> 根据本周的改动起草一份。</p>
+                </div>
+              </div>
+              <div class="approval" data-step="approve">
+                <span class="approval-icon"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span>
+                <span class="approval-text" data-en="Claude Code wants to read this week's changes" data-zh="Claude Code 请求读取本周的改动">Claude Code wants to read this week's changes</span>
+                <span class="approval-actions"><span class="fake-btn" data-en="Deny" data-zh="拒绝">Deny</span><span class="fake-btn fake-btn-go" id="allow-btn" data-en="Allow" data-zh="允许">Allow</span></span>
+                <span class="approval-done"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-en="Allowed once" data-zh="已允许本次">Allowed once</span></span>
+              </div>
+              <div class="msg msg-agent" data-step="card" data-typing="cc">
+                <b class="av av-cc" aria-hidden="true">C</b>
+                <div class="bubble bubble-card">
+                  <span class="who">Claude Code <em class="tag">AI</em></span>
+                  <div class="card-doc">
+                    <div class="card-doc-head"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg><strong data-en="Release notes · v2.4" data-zh="更新说明 · v2.4">Release notes · v2.4</strong></div>
+                    <ul>
+                      <li data-en="Search is twice as fast" data-zh="搜索速度提升一倍">Search is twice as fast</li>
+                      <li data-en="Dark mode on mobile" data-zh="移动端支持深色模式">Dark mode on mobile</li>
+                      <li data-en="12 bug fixes" data-zh="修复 12 个问题">12 bug fixes</li>
+                    </ul>
+                    <div class="card-doc-actions"><span class="fake-btn" data-en="Edit" data-zh="编辑">Edit</span><span class="fake-btn fake-btn-go" id="share-btn"><svg class="icon" aria-hidden="true"><use href="#i-share"/></svg><span data-en="Share" data-zh="分享">Share</span></span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="msg" data-step="react">
+                <b class="av av-leo" aria-hidden="true">L</b>
+                <div class="bubble"><span class="who">Leo</span><p data-en="Looks great. Ship it!" data-zh="写得好，发吧！">Looks great. Ship it!</p></div>
+              </div>
+              <div class="sys" data-step="shared"><svg class="icon" aria-hidden="true"><use href="#i-share"/></svg><span data-en="Shared to #announcements and Customers" data-zh="已分享到 #announcements 和 Customers">Shared to #announcements and Customers</span></div>
+              <div class="typing" id="typing" aria-hidden="true"><b class="av av-cc">C</b><span><i></i><i></i><i></i></span></div>
+            </div>
+            <div class="composer" aria-hidden="true">
+              <div class="mention-pop" id="mention-pop">
+                <span class="mp-item is-hot"><b class="av av-cc">C</b>Claude Code<em class="tag">AI</em></span>
+                <span class="mp-item"><b class="av av-cx">X</b>Codex<em class="tag">AI</em></span>
+              </div>
+              <span class="composer-text" id="composer-text" data-type-en="@Claude Code draft them from this week's changes." data-type-zh="@Claude Code 根据本周的改动起草一份。"></span><span class="composer-placeholder" data-en="Message Launch crew" data-zh="发消息给 发布小队">Message Launch crew</span>
+              <span class="send" id="send-btn"><svg class="icon"><use href="#i-send"/></svg></span>
+            </div>
+            <div class="share-sheet" id="share-sheet" aria-hidden="true">
+              <strong data-en="Share to" data-zh="分享到">Share to</strong>
+              <span class="ss-item" data-target="1"><span class="av av-channel"><svg class="icon"><use href="#i-hash"/></svg></span>announcements<span class="ss-check"><svg class="icon"><use href="#i-check"/></svg></span></span>
+              <span class="ss-item" data-target="2"><span class="av av-group"><svg class="icon"><use href="#i-users"/></svg></span>Customers<span class="ss-check"><svg class="icon"><use href="#i-check"/></svg></span></span>
+              <span class="ss-item"><span class="av av-mia">M</span>Mia Chen<span class="ss-check"><svg class="icon"><use href="#i-check"/></svg></span></span>
+              <span class="fake-btn fake-btn-go ss-send" id="ss-send" data-en="Send" data-zh="发送">Send</span>
+            </div>
+          </div>
+
+          <aside class="app-info">
+            <p class="info-label" data-en="Members" data-zh="成员">Members</p>
+            <ul class="info-list">
+              <li><b class="av av-me" data-en="Me" data-zh="我">Me</b><span data-en="You" data-zh="你">You</span></li>
+              <li><b class="av av-mia">M</b>Mia Chen</li>
+              <li><b class="av av-leo">L</b>Leo Park</li>
+              <li><b class="av av-cc">C</b>Claude Code<em class="tag">AI</em></li>
+              <li><b class="av av-cx">X</b>Codex<em class="tag">AI</em></li>
+            </ul>
+            <p class="info-label" data-en="Visible to agents" data-zh="智能体可见">Visible to agents</p>
+            <ul class="info-list info-context">
+              <li><span class="ctx-on"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span><span data-en="This week's changes" data-zh="本周改动">This week's changes</span></li>
+              <li><span class="ctx-off"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span data-en="Customer list" data-zh="客户名单">Customer list</span></li>
+            </ul>
+          </aside>
+          <svg class="fake-cursor" id="fake-cursor" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 8-6 1.6L10 19Z"/></svg>
         </div>
-        <div id="panel-learn" class="conversation-panel" role="tabpanel" aria-labelledby="tab-learn" tabindex="0" hidden>
-          <div class="message message-human"><span class="message-author" data-en="You" data-zh="你">You</span><p data-en="I found three articles on this topic. Help me understand where their arguments differ." data-zh="我找到了三篇相关文章，帮我理解它们的观点有什么不同。">I found three articles on this topic. Help me understand where their arguments differ.</p></div>
-          <div class="message message-agent"><span class="agent-avatar" aria-hidden="true"><svg class="icon"><use href="#i-agent"/></svg></span><div><span class="message-author" data-en="Your agent" data-zh="你的智能体">Your agent</span><p data-en="Choose the excerpts you want to share. We can compare their main ideas, the evidence, and the questions they leave open." data-zh="选出你愿意分享的段落。我们可以一起比较核心观点、支持证据，以及还没有回答的问题。">Choose the excerpts you want to share. We can compare their main ideas, the evidence, and the questions they leave open.</p><div class="idea-slip"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><div><strong data-en="Understand the idea behind the answer." data-zh="理解答案背后的思路。">Understand the idea behind the answer.</strong><span data-en="Compare the sources. Keep the useful questions." data-zh="比较来源，把有价值的问题留下来。">Compare the sources. Keep the useful questions.</span></div></div></div></div>
-          <div class="conversation-end"><span class="end-line"></span><span data-en="Next: follow the question that matters to you." data-zh="接下来，继续追问你在意的问题。">Next: follow the question that matters to you.</span><span class="end-line"></span></div>
-        </div>
-        <div id="panel-plan" class="conversation-panel" role="tabpanel" aria-labelledby="tab-plan" tabindex="0" hidden>
-          <div class="message message-human"><span class="message-author" data-en="You" data-zh="你">You</span><p data-en="I&#x27;m back to the project. Help me pick up from the decisions we made last time." data-zh="我回到这个项目了，帮我从上次的讨论和决定继续往下做。">I'm back to the project. Help me pick up from the decisions we made last time.</p></div>
-          <div class="message message-agent"><span class="agent-avatar" aria-hidden="true"><svg class="icon"><use href="#i-agent"/></svg></span><div><span class="message-author" data-en="Your agent" data-zh="你的智能体">Your agent</span><p data-en="Let&#x27;s recap the goal, the decisions in this conversation, and the next step that needs your input." data-zh="我们先回顾目标、这段对话里已经做出的决定，以及下一步需要你参与的事情。">Let's recap the goal, the decisions in this conversation, and the next step that needs your input.</p><div class="idea-slip"><svg class="icon" aria-hidden="true"><use href="#i-plan"/></svg><div><strong data-en="A conversation worth continuing." data-zh="让对话持续，让工作接续。">A conversation worth continuing.</strong><span data-en="Keep the goal and the next step in view." data-zh="目标和下一步，都清晰可见。">Keep the goal and the next step in view.</span></div></div></div></div>
-          <div class="conversation-end"><span class="end-line"></span><span data-en="Next: continue with the context in view." data-zh="接下来，带着已有上下文继续。">Next: continue with the context in view.</span><span class="end-line"></span></div>
         </div>
       </div>
-      <div class="demo-orbit" aria-hidden="true"><svg viewBox="0 0 160 160"><ellipse cx="80" cy="82" rx="65" ry="28" transform="rotate(-34 80 82)"/><circle cx="122" cy="43" r="7"/></svg></div>
+      <figcaption data-en="Concept preview of the LicoUp experience, not the final interface." data-zh="LicoUp 体验概念示意，非最终界面。">Concept preview of the LicoUp experience, not the final interface.</figcaption>
+    </figure>
+  </section>
+
+  <section class="agents" aria-labelledby="agents-title">
+    <p id="agents-title" class="agents-title" data-en="Works with the agents you already use" data-zh="接入你已经在用的智能体">Works with the agents you already use</p>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Claude Code</span><span>Codex</span><span>Cursor</span><span>GitHub Copilot</span><span>OpenCode</span><span>Antigravity</span><span>Kilo Code</span><span>OpenClaw</span><span>Hermes Agent</span><span>Kimi Code</span><span>Pi Agent</span><span>DeepSeek Harness</span><span>Lico Agent</span>
+        <span>Claude Code</span><span>Codex</span><span>Cursor</span><span>GitHub Copilot</span><span>OpenCode</span><span>Antigravity</span><span>Kilo Code</span><span>OpenClaw</span><span>Hermes Agent</span><span>Kimi Code</span><span>Pi Agent</span><span>DeepSeek Harness</span><span>Lico Agent</span>
+      </div>
     </div>
-    <p class="demo-caption"><span data-en="Illustrative conversations." data-zh="以上为协作对话示意。">Illustrative conversations.</span> <a href="/status/" data-en="Check current agent availability" data-zh="查看智能体的当前可用性">Check current agent availability</a></p>
+    <p class="visually-hidden">Claude Code, Codex, Cursor, GitHub Copilot, OpenCode, Antigravity, Kilo Code, OpenClaw, Hermes Agent, Kimi Code, Pi Agent, DeepSeek Harness, Lico Agent.</p>
+    <a class="text-link" href="/status/"><span data-en="13 built-in adapters · check compatibility" data-zh="内置 13 种适配器 · 查看兼容说明">13 built-in adapters · check compatibility</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
   </section>
-  <section class="your-space section-wrap" id="your-space" aria-labelledby="space-title">
-    <div class="space-intro reveal"><h2 id="space-title"><span data-en="Agent collaboration," data-zh="人与智能体协作，">Agent collaboration,</span><br><span class="serene-word" data-en="with you at the center." data-zh="始终以你为中心。">with you at the center.</span></h2><p data-en="You bring the intent. Agents contribute their capabilities. LicoUp is built around the conversation, context, and decisions that connect the work." data-zh="你提出目标，智能体发挥所长。LicoUp 围绕对话、上下文和你的决定，把协作串联起来。">You bring the intent. Agents contribute their capabilities. LicoUp is built around the conversation, context, and decisions that connect the work.</p></div>
-    <article class="feature-row feature-local reveal"><div class="feature-art local-art" aria-hidden="true"><div class="local-orbit orbit-one"></div><div class="local-orbit orbit-two"></div><div class="local-label local-label-one"><svg class="icon"><use href="#i-chat"/></svg><span data-en="Your conversations" data-zh="你的对话">Your conversations</span></div><div class="local-core"><img src="/assets/licoup-logo.svg" width="112" height="112" alt="" loading="lazy"></div><div class="local-label local-label-two"><svg class="icon"><use href="#i-agent"/></svg><span data-en="Your local agents" data-zh="你的本地智能体">Your local agents</span></div><span class="orbital-dot dot-one"></span><span class="orbital-dot dot-two"></span></div><div class="feature-copy"><h3 data-en="Keep your work close." data-zh="让工作，留在身边。">Keep your work close.</h3><p data-en="Local-agent discovery and conversation continuity are the foundation. Find the agents on your device and keep the thread of your work in a client built around you." data-zh="本地智能体发现与持续对话是当前基础。在自己的设备上找到智能体，让工作脉络留在以你为中心的客户端里。">Local-agent discovery and conversation continuity are the foundation. Find the agents on your device and keep the thread of your work in a client built around you.</p><a class="text-link feature-link" href="/architecture/"><span data-en="Explore the local-first architecture" data-zh="了解本地优先架构">Explore the local-first architecture</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></article>
-    <article class="feature-row feature-control reveal"><div class="feature-copy"><h3 data-en="The next move is yours." data-zh="下一步，由你决定。">The next move is yours.</h3><p data-en="Choose what to share and what to allow. LicoUp keeps approvals explicit and asks for device permissions when your action needs them." data-zh="分享什么、允许什么，都由你选择。LicoUp 让授权清晰可见，只在你的操作需要时请求设备权限。">Choose what to share and what to allow. LicoUp keeps approvals explicit and asks for device permissions when your action needs them.</p><a class="text-link feature-link" href="/security/"><span data-en="Read about context, privacy, and approvals" data-zh="了解上下文、隐私与授权">Read about context, privacy, and approvals</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><div class="feature-art control-art" aria-hidden="true"><svg class="control-arcs" viewBox="0 0 160 160"><path d="M28 154C-16 80 48-12 122 14M66 160C16 84 86 20 156 52"/></svg><div class="choice-slip"><span class="choice-lock"><svg class="icon"><use href="#i-lock"/></svg></span><strong data-en="You have the final say." data-zh="你来做最后决定。">You have the final say.</strong><span data-en="Your space. Your decisions." data-zh="你的空间，你的选择。">Your space. Your decisions.</span><div class="choice-example"><svg class="icon"><use href="#i-check"/></svg><span data-en="On your terms" data-zh="按你的意愿">On your terms</span></div></div></div></article>
+
+  <section class="today section-wrap" id="today" aria-labelledby="today-title">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-en="Available today" data-zh="现已可用">Available today</p>
+      <h2 id="today-title" data-en="Collaboration that feels like a conversation." data-zh="协作，就像聊天一样自然。">Collaboration that feels like a conversation.</h2>
+    </div>
+    <div class="feature-grid">
+      <article class="feature reveal">
+        <div class="vignette v-mention" aria-hidden="true">
+          <div class="vm-input"><span class="vm-at">@</span><span class="vm-caret"></span></div>
+          <div class="vm-pop"><span class="vm-row vm-hot"><b class="av av-cc">C</b>Claude Code</span><span class="vm-row"><b class="av av-cx">X</b>Codex</span><span class="vm-row"><b class="av av-cu">Cu</b>Cursor</span></div>
+          <span class="vm-joined"><b class="av av-cc">C</b><span data-en="Claude Code joined" data-zh="Claude Code 已加入">Claude Code joined</span></span>
+        </div>
+        <h3 data-en="Bring in the right agent." data-zh="请来合适的智能体。">Bring in the right agent.</h3>
+        <p data-en="@mention Claude Code, Codex or any connected agent. It joins with the context you choose." data-zh="@ 一下 Claude Code、Codex 或任何已接入的智能体，它会带着你选定的上下文加入。">@mention Claude Code, Codex or any connected agent. It joins with the context you choose.</p>
+      </article>
+      <article class="feature reveal">
+        <div class="vignette v-control" aria-hidden="true">
+          <div class="vc-row"><span data-en="Project notes" data-zh="项目笔记">Project notes</span><i class="vc-switch on"></i></div>
+          <div class="vc-row"><span data-en="Customer list" data-zh="客户名单">Customer list</span><i class="vc-switch vc-anim"></i></div>
+          <div class="vc-ask"><svg class="icon"><use href="#i-lock"/></svg><span data-en="Run a script?" data-zh="运行脚本？">Run a script?</span><b data-en="Allow once" data-zh="允许一次">Allow once</b></div>
+        </div>
+        <h3 data-en="Stay in control." data-zh="始终由你掌控。">Stay in control.</h3>
+        <p data-en="Choose what each agent can see. Sensitive actions wait for your approval." data-zh="为每个智能体选择可见的内容，敏感操作等你批准。">Choose what each agent can see. Sensitive actions wait for your approval.</p>
+      </article>
+      <article class="feature reveal">
+        <div class="vignette v-resume" aria-hidden="true">
+          <div class="vr-card"><b data-en="Mon" data-zh="周一">Mon</b><span data-en="Goal agreed" data-zh="确定目标">Goal agreed</span></div>
+          <div class="vr-card"><b data-en="Wed" data-zh="周三">Wed</b><span data-en="Two decisions" data-zh="两项决定">Two decisions</span></div>
+          <div class="vr-card vr-now"><b data-en="Today" data-zh="今天">Today</b><span data-en="Pick up here" data-zh="从这里继续">Pick up here</span></div>
+        </div>
+        <h3 data-en="Pick up where you left off." data-zh="随时接着来。">Pick up where you left off.</h3>
+        <p data-en="Conversations live on your device, so goals and decisions stay in view." data-zh="对话保存在你的设备上，目标与决定一直清晰可见。">Conversations live on your device, so goals and decisions stay in view.</p>
+      </article>
+    </div>
   </section>
+
+  <section class="statement section-wrap" aria-label="Our principle" data-aria-en="Our principle" data-aria-zh="我们的原则">
+    <p class="scrub" data-lang="en">Your people. Your agents. Your call.</p>
+    <p class="scrub" data-lang="zh">你的伙伴，你的智能体，由你决定。</p>
+  </section>
+
+  <section class="roadmap section-wrap" id="roadmap" aria-labelledby="roadmap-title">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-en="Where we're heading" data-zh="我们的方向">Where we're heading</p>
+      <h2 id="roadmap-title" data-en="From your Mac to your whole network." data-zh="从你的 Mac，到你的整个网络。">From your Mac to your whole network.</h2>
+    </div>
+    <ol class="stages">
+      <li class="stage stage-now reveal"><span class="stage-tag" data-en="Now" data-zh="现在">Now</span><h3 data-en="Local agents on your Mac" data-zh="Mac 上的本地智能体">Local agents on your Mac</h3><p data-en="13 built-in adapters, explicit approvals and conversations that last." data-zh="13 种内置适配器、明确的授权，以及能延续的对话。">13 built-in adapters, explicit approvals and conversations that last.</p></li>
+      <li class="stage stage-next reveal"><span class="stage-tag" data-en="Next" data-zh="下一步">Next</span><h3 data-en="People and shared results" data-zh="真人通讯与成果分享">People and shared results</h3><p data-en="Message people alongside agents, and send results to the conversations that need them." data-zh="和真人、智能体一起聊，把成果送进需要它的对话。">Message people alongside agents, and send results to the conversations that need them.</p></li>
+      <li class="stage stage-later reveal"><span class="stage-tag" data-en="Later" data-zh="未来">Later</span><h3 data-en="Every device, an open network" data-zh="跨设备，开放网络">Every device, an open network</h3><p data-en="Multi-device history and federation over the Lico Arc Protocol, with your endpoint in charge." data-zh="多设备历史与基于 Lico Arc 协议的联邦互通，由你的端点做主。">Multi-device history and federation over the Lico Arc Protocol, with your endpoint in charge.</p></li>
+    </ol>
+  </section>
+
   <section class="guides section-wrap" id="guides" aria-labelledby="guides-title">
-    <div class="section-heading reveal"><h2 id="guides-title"><span data-en="A good question" data-zh="一个好问题，">A good question</span><br><span class="serene-word" data-en="deserves a real answer." data-zh="值得一个认真回答。">deserves a real answer.</span></h2><p data-en="Go a little deeper. Clear explanations for the way you want to work with agents." data-zh="再深入一点。用清楚的解释，找到适合你的人与智能体协作方式。">Go a little deeper. Clear explanations for the way you want to work with agents.</p></div>
-    <div class="guide-spread">
-      <a class="guide-feature reveal" href="/human-agent-collaboration-client/">
-        <h3 data-en="What is agent collaboration?" data-zh="什么是人与智能体协作？">What is agent collaboration?</h3>
-        <p data-en="People and AI agents working toward a shared goal. Learn how Human-Agent Collaboration keeps you involved, and where Multi-Agent Collaboration fits." data-zh="人与 AI 智能体朝着共同的目标前进。理解人如何持续参与协作，以及多智能体协作在其中的位置。">People and AI agents working toward a shared goal. Learn how Human-Agent Collaboration keeps you involved, and where Multi-Agent Collaboration fits.</p>
-        <div class="collaboration-figure" aria-hidden="true"><div class="figure-participants"><span class="figure-human" data-en="You" data-zh="你">You</span><span class="figure-join">+</span><span class="figure-agent"><svg class="icon"><use href="#i-agent"/></svg><span data-en="Your agents" data-zh="你的智能体">Your agents</span></span></div><span class="figure-connector"></span><span class="figure-conversation"><svg class="icon"><use href="#i-chat"/></svg><span data-en="A shared conversation" data-zh="一个共同的对话空间">A shared conversation</span></span><div class="figure-context"><span data-en="Context" data-zh="上下文">Context</span><span data-en="Decisions" data-zh="决定">Decisions</span><span data-en="Continuity" data-zh="接续">Continuity</span></div></div>
-        <span class="guide-read"><span data-en="Meet the Human-Agent Collaboration Client" data-zh="认识人与智能体协作客户端">Meet the Human-Agent Collaboration Client</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
-      </a>
-      <div class="guide-reading-list reveal">
-        <a class="guide-reading" href="/guides/ai-coding-agents/"><div><h3 data-en="The coding-agent landscape" data-zh="读懂编码智能体">The coding-agent landscape</h3><p data-en="Claude Code, Codex, Cursor, GitHub Copilot, and OpenCode: five representative interfaces and what they mean for collaboration." data-zh="Claude Code、Codex、Cursor、GitHub Copilot 与 OpenCode：五种代表性接口，如何影响协作体验。">Claude Code, Codex, Cursor, GitHub Copilot, and OpenCode: five representative interfaces and what they mean for collaboration.</p><span data-en="Interfaces &amp; compatibility" data-zh="接口与兼容说明">Interfaces &amp; compatibility</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a class="guide-reading" href="/concepts/agent-orchestration-vs-collaboration/"><div><h3 data-en="Orchestration or collaboration?" data-zh="编排与协作，如何配合？">Orchestration or collaboration?</h3><p data-en="One organizes how work runs. The other makes participants, context, and decisions understandable. See how the layers fit." data-zh="一个组织任务如何执行，一个让参与者、上下文与决定清晰可见。了解这两层如何配合。">One organizes how work runs. The other makes participants, context, and decisions understandable. See how the layers fit.</p><span data-en="A practical comparison" data-zh="一个实用的概念比较">A practical comparison</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a class="guide-reading" href="/architecture/"><div><h3 data-en="What makes a client local-first?" data-zh="本地优先，具体意味着什么？">What makes a client local-first?</h3><p data-en="Follow the conversation model, agent adapters, and endpoint boundaries that shape LicoUp." data-zh="从对话模型、智能体适配器与端点边界，理解 LicoUp 的工作方式。">Follow the conversation model, agent adapters, and endpoint boundaries that shape LicoUp.</p><span data-en="Inside the architecture" data-zh="深入产品架构">Inside the architecture</span></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-      </div>
+    <div class="section-head section-head-row reveal">
+      <h2 id="guides-title" data-en="Go deeper." data-zh="深入了解。">Go deeper.</h2>
+      <p data-en="Guides are in English." data-zh="指南目前为英文。">Guides are in English.</p>
     </div>
-    <div class="guide-directory"><span data-en="Find your next read" data-zh="继续了解">Find your next read</span><a href="/product/" data-en="The product" data-zh="产品介绍">The product</a><a href="/use-cases/" data-en="Everyday use cases" data-zh="日常使用场景">Everyday use cases</a><a href="/security/" data-en="Privacy &amp; security" data-zh="隐私与安全">Privacy &amp; security</a><a href="/status/" data-en="Current compatibility" data-zh="当前兼容说明">Current compatibility</a></div>
+    <div class="guide-grid">
+      <a class="guide guide-feature reveal" href="/human-agent-collaboration-client/"><span class="guide-tag" data-en="Start here" data-zh="从这里开始">Start here</span><strong data-en="What is agent collaboration?" data-zh="什么是人与智能体协作？">What is agent collaboration?</strong><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="guide reveal" href="/use-cases/"><strong data-en="Everyday use cases" data-zh="日常使用场景">Everyday use cases</strong><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="guide reveal" href="/guides/ai-coding-agents/"><strong data-en="Coding-agent interfaces, compared" data-zh="编码智能体接口对比">Coding-agent interfaces, compared</strong><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="guide reveal" href="/concepts/agent-orchestration-vs-collaboration/"><strong data-en="Orchestration vs. collaboration" data-zh="编排与协作有何不同">Orchestration vs. collaboration</strong><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="guide reveal" href="/product/"><strong data-en="The product" data-zh="产品介绍">The product</strong><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="guide reveal" href="/security/"><strong data-en="Privacy &amp; security" data-zh="隐私与安全">Privacy &amp; security</strong><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="guide reveal" href="/architecture/"><strong data-en="Local-first architecture" data-zh="本地优先架构">Local-first architecture</strong><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="guide reveal" href="/status/"><strong data-en="Compatibility" data-zh="兼容说明">Compatibility</strong><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
   </section>
-  <section class="open-section" aria-labelledby="open-title"><div class="open-content section-wrap"><div class="open-title-wrap reveal"><h2 id="open-title"><span data-en="Open source." data-zh="开放源码，">Open source.</span><br><span data-en="Open possibilities." data-zh="开放更多可能。">Open possibilities.</span></h2><svg class="open-orbit" viewBox="0 0 120 120" aria-hidden="true"><ellipse cx="60" cy="60" rx="52" ry="26" transform="rotate(-32 60 60)"/><ellipse cx="60" cy="60" rx="52" ry="26" transform="rotate(54 60 60)"/><circle cx="99" cy="35" r="7"/></svg></div><div class="open-bottom"><p data-en="Follow the code, understand the decisions, and help shape the next chapter of human-agent collaboration. LicoUp grows in the open." data-zh="阅读代码，理解设计决策，一起参与人与智能体协作的下一步。LicoUp 在开放中持续成长。">Follow the code, understand the decisions, and help shape the next chapter of human-agent collaboration. LicoUp grows in the open.</p><a class="button button-light" href="https://github.com/LicoLand/LicoUp"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span data-en="Explore the source" data-zh="探索源代码">Explore the source</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div><div class="open-fineprint"><span data-en="Open source · AGPL-3.0-or-later" data-zh="开放源码 · AGPL-3.0-or-later">Open source · AGPL-3.0-or-later</span><a href="/status/"><span data-en="Check current availability" data-zh="查看当前可用性">Check current availability</span><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div></div></section>
-  <section class="questions section-wrap" id="questions" aria-labelledby="questions-title"><div class="questions-heading"><h2 id="questions-title" data-en="A clearer starting point." data-zh="开始之前，了解清楚。">A clearer starting point.</h2><p data-en="Straight answers about the product, your agents, and your control." data-zh="关于产品、智能体和你的选择，给你清晰的答案。">Straight answers about the product, your agents, and your control.</p></div><div class="faq-list">
-    <details><summary><span data-en="What is LicoUp?" data-zh="LicoUp 是什么？">What is LicoUp?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p data-en="LicoUp is an open-source, local-first Human-Agent Collaboration Client. It brings a human-facing conversation layer to agent collaboration, with local-agent conversations as its current foundation." data-zh="LicoUp 是开源、本地优先的人与智能体协作客户端，为智能体协作提供面向人的对话层，当前以本地智能体对话为基础。">LicoUp is an open-source, local-first Human-Agent Collaboration Client. It brings a human-facing conversation layer to agent collaboration, with local-agent conversations as its current foundation.</p><a class="text-link" href="/product/"><span data-en="Explore the product" data-zh="了解产品">Explore the product</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></details>
-    <details><summary><span data-en="How do human-agent and multi-agent collaboration fit together?" data-zh="人与智能体协作，和多智能体协作有什么关系？">How do human-agent and multi-agent collaboration fit together?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p data-en="Agent Collaboration is the broad category. Human-Agent Collaboration keeps a person actively involved in goals, context, and approvals. Multi-Agent Collaboration describes work involving several agents. A workflow can involve both." data-zh="Agent Collaboration 是上位类别。人与智能体协作强调人在目标、上下文与授权中的持续参与；多智能体协作描述多个智能体共同参与的工作。两者可以发生在同一个工作流中。">Agent Collaboration is the broad category. Human-Agent Collaboration keeps a person actively involved in goals, context, and approvals. Multi-Agent Collaboration describes work involving several agents. A workflow can involve both.</p><a class="text-link" href="/human-agent-collaboration-client/"><span data-en="Understand the collaboration model" data-zh="理解协作模型">Understand the collaboration model</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></details>
-    <details><summary><span data-en="Which AI agents does LicoUp work with?" data-zh="LicoUp 与哪些 AI 智能体适配？">Which AI agents does LicoUp work with?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p data-en="LicoUp includes built-in conversation adapters for 13 agent targets, including Claude Code, Codex, Cursor, GitHub Copilot, and OpenCode. They connect to locally installed agents through native CLI or local protocol interfaces. Actual compatibility depends on the agent version, available interface, and authentication setup." data-zh="LicoUp 内置 13 种智能体的对话适配器，包括 Claude Code、Codex、Cursor、GitHub Copilot 和 OpenCode，通过原生命令行或本地协议连接已安装的智能体。实际兼容取决于智能体版本、可用接口与认证配置。">LicoUp includes built-in conversation adapters for 13 agent targets, including Claude Code, Codex, Cursor, GitHub Copilot, and OpenCode. They connect to locally installed agents through native CLI or local protocol interfaces. Actual compatibility depends on the agent version, available interface, and authentication setup.</p><a class="text-link" href="/status/"><span data-en="Check current compatibility" data-zh="查看当前兼容说明">Check current compatibility</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></details>
-    <details><summary><span data-en="Can I download LicoUp?" data-zh="现在可以下载 LicoUp 吗？">Can I download LicoUp?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p data-en="LicoUp v0.1.2 is available for macOS on Apple silicon. The public release includes the DMG and verification files. The status page brings together the current release, implementation, and roadmap." data-zh="LicoUp v0.1.2 已提供适用于 Apple 芯片 Mac 的 macOS 版本。公开发布页包含 DMG 与验证文件，状态页集中展示当前发布、实现进展与路线图。">LicoUp v0.1.2 is available for macOS on Apple silicon. The public release includes the DMG and verification files. The status page brings together the current release, implementation, and roadmap.</p><a class="text-link" href="https://github.com/LicoLand/LicoUp/releases/tag/v0.1.2"><span data-en="See the macOS release" data-zh="查看 macOS 发布">See the macOS release</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></details>
-    <details><summary><span data-en="Does local-first mean everything works offline?" data-zh="本地优先意味着完全离线吗？">Does local-first mean everything works offline?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p data-en="Local-first describes where the client and its conversation authority live. An agent you choose may still use an online model provider, which receives the content sent to it. Choose agents and context with that boundary in mind." data-zh="本地优先描述客户端与对话权威所在的位置。你选择的智能体仍可能使用在线模型服务，服务方会接收到发送给它的内容。选择智能体与分享上下文时，可以据此作出决定。">Local-first describes where the client and its conversation authority live. An agent you choose may still use an online model provider, which receives the content sent to it. Choose agents and context with that boundary in mind.</p><a class="text-link" href="/security/"><span data-en="Understand the privacy boundaries" data-zh="了解隐私边界">Understand the privacy boundaries</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></details>
-    <details><summary><span data-en="Where is LicoUp heading next?" data-zh="LicoUp 接下来会走向哪里？">Where is LicoUp heading next?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p data-en="LicoUp is growing from local-agent conversations toward a shared experience across people, agents, and devices. Peer protection is a preview capability; full Lico Arc integration and federation belong to the roadmap." data-zh="LicoUp 从本地智能体对话起步，逐步走向连接人与智能体、跨越设备的共享体验。端点保护处于预览阶段，完整 Lico Arc 集成与联邦协作属于路线图。">LicoUp is growing from local-agent conversations toward a shared experience across people, agents, and devices. Peer protection is a preview capability; full Lico Arc integration and federation belong to the roadmap.</p><a class="text-link" href="/status/"><span data-en="Follow current progress" data-zh="关注当前进展">Follow current progress</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></details>
-  </div></section>
-  <section class="closing section-wrap" aria-labelledby="closing-title"><div class="closing-icon" aria-hidden="true"><img src="/assets/licoup-logo.svg" alt="" width="80" height="80" loading="lazy"></div><h2 id="closing-title"><span data-en="Your next idea." data-zh="你的下一个想法，">Your next idea.</span><br><span class="serene-word" data-en="A little more possible." data-zh="多一点实现的可能。">A little more possible.</span></h2><a class="button button-primary" href="https://github.com/LicoLand/LicoUp/releases/download/v0.1.2/LicoUp-macos-arm64.dmg"><span data-en="Download for macOS" data-zh="下载 macOS 版">Download for macOS</span><span class="button-disc"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></span></a><p data-en="v0.1.2 · For Macs with Apple silicon" data-zh="v0.1.2 · 适用于 Apple 芯片 Mac">v0.1.2 · For Macs with Apple silicon</p></section>
+
+  <section class="faq section-wrap" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="reveal" data-en="Questions, answered." data-zh="常见问题。">Questions, answered.</h2>
+    <div class="faq-list">
+      <details><summary><span data-en="What is LicoUp?" data-zh="LicoUp 是什么？">What is LicoUp?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p data-en="An open-source, local-first Human-Agent Collaboration Client. It starts with conversations with the AI agents on your Mac and is growing into a messenger for people and agents." data-zh="开源、本地优先的人与智能体协作客户端。它从你 Mac 上的 AI 智能体对话起步，正在成长为人与智能体共同使用的通讯软件。">An open-source, local-first Human-Agent Collaboration Client. It starts with conversations with the AI agents on your Mac and is growing into a messenger for people and agents.</p><a class="text-link" href="/product/"><span data-en="About the product" data-zh="了解产品">About the product</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></details>
+      <details><summary><span data-en="Can I message other people today?" data-zh="现在能和其他人聊天吗？">Can I message other people today?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p data-en="Not yet. Today's release focuses on local agents. Messaging with people, shared results and multi-device history are on the roadmap." data-zh="还不能。当前版本专注于本地智能体，与真人通讯、成果分享和多设备历史都在路线图中。">Not yet. Today's release focuses on local agents. Messaging with people, shared results and multi-device history are on the roadmap.</p><a class="text-link" href="/status/"><span data-en="Current progress" data-zh="当前进展">Current progress</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></details>
+      <details><summary><span data-en="Which agents does it work with?" data-zh="支持哪些智能体？">Which agents does it work with?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p data-en="13 built-in adapters, including Claude Code, Codex, Cursor, GitHub Copilot and OpenCode. Install and set up each agent first; its version and interface decide what works." data-zh="内置 13 种适配器，包括 Claude Code、Codex、Cursor、GitHub Copilot 和 OpenCode。每个智能体需先自行安装配置，具体可用功能取决于其版本和接口。">13 built-in adapters, including Claude Code, Codex, Cursor, GitHub Copilot and OpenCode. Install and set up each agent first; its version and interface decide what works.</p><a class="text-link" href="/status/"><span data-en="Check compatibility" data-zh="查看兼容说明">Check compatibility</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></details>
+      <details><summary><span data-en="Does local-first mean offline?" data-zh="本地优先等于完全离线吗？">Does local-first mean offline?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p data-en="Not quite. Your conversations stay on your device, but an agent you pick may use an online model, which sees what you send it." data-zh="不完全是。对话保存在你的设备上，但你选择的智能体可能调用在线模型，模型服务能看到发给它的内容。">Not quite. Your conversations stay on your device, but an agent you pick may use an online model, which sees what you send it.</p><a class="text-link" href="/security/"><span data-en="Privacy boundaries" data-zh="了解隐私边界">Privacy boundaries</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></details>
+      <details><summary><span data-en="Human-agent or multi-agent collaboration?" data-zh="人机协作还是多智能体协作？">Human-agent or multi-agent collaboration?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p data-en="Both fit. Human-agent collaboration keeps you in charge of goals, context and approvals; multi-agent collaboration means several agents share the work. One conversation can involve both." data-zh="两者可以并存。人与智能体协作让你掌握目标、上下文和授权；多智能体协作是多个智能体分担工作。同一个对话里可以同时出现。">Both fit. Human-agent collaboration keeps you in charge of goals, context and approvals; multi-agent collaboration means several agents share the work. One conversation can involve both.</p><a class="text-link" href="/human-agent-collaboration-client/"><span data-en="The collaboration model" data-zh="理解协作模型">The collaboration model</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></details>
+      <details><summary><span data-en="Can I download it today?" data-zh="现在能下载吗？">Can I download it today?</span><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><div class="faq-answer"><p data-en="Yes. v0.1.2 is available for Macs with Apple silicon. The release page has the DMG and verification files." data-zh="可以。v0.1.2 已支持 Apple 芯片 Mac，发布页提供 DMG 与校验文件。">Yes. v0.1.2 is available for Macs with Apple silicon. The release page has the DMG and verification files.</p><a class="text-link" href="https://github.com/LicoLand/LicoUp/releases/tag/v0.1.2"><span data-en="See the release" data-zh="查看发布页">See the release</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></details>
+    </div>
+  </section>
+
+  <section class="closing" aria-labelledby="closing-title">
+    <div class="aurora aurora-soft" aria-hidden="true"><i></i><i></i></div>
+    <div class="closing-lico" id="closing-lico" data-lico data-look aria-hidden="true"></div>
+    <h2 id="closing-title" data-en="Start the conversation." data-zh="开始对话。">Start the conversation.</h2>
+    <p data-en="Free and open source. Built in the open." data-zh="免费开源，公开构建。">Free and open source. Built in the open.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="https://github.com/LicoLand/LicoUp/releases/download/v0.1.2/LicoUp-macos-arm64.dmg"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg><span data-en="Download for macOS" data-zh="下载 macOS 版">Download for macOS</span></a>
+      <a class="button button-quiet" href="https://github.com/LicoLand/LicoUp"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span data-en="Explore the source" data-zh="浏览源代码">Explore the source</span></a>
+    </div>
+    <p class="closing-fine" data-en="v0.1.2 · Macs with Apple silicon" data-zh="v0.1.2 · 适用于 Apple 芯片 Mac">v0.1.2 · Macs with Apple silicon</p>
+  </section>
 </main>
-<footer class="site-footer"><div class="footer-top"><a class="brand" href="/" aria-label="LicoUp home" data-aria-en="LicoUp home" data-aria-zh="LicoUp 首页"><img src="/assets/licoup-logo.svg" alt="" width="36" height="36"><span>LicoUp<span class="brand-period">.</span></span></a><p data-en="Agent collaboration, centered on you." data-zh="人与智能体协作，以你为中心。">Agent collaboration, centered on you.</p><div class="footer-links"><a href="/human-agent-collaboration-client/" data-en="Collaboration" data-zh="协作理念">Collaboration</a><a href="#guides" data-en="Guides" data-zh="协作指南">Guides</a><a href="/status/" data-en="Compatibility" data-zh="兼容说明">Compatibility</a><a href="/product/" data-en="Product guide" data-zh="Product guide (English)">Product guide</a><a href="https://github.com/LicoLand/LicoUp">GitHub</a><a href="https://licoup.net/" data-en="Network plan" data-zh="网络计划">Network plan</a><a href="https://lico.land/">LicoLand<svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a></div></div><div class="footer-bottom"><span data-en="LicoUp by LicoLand · Open source, still growing." data-zh="LicoUp，由 LicoLand 打造 · 开放源码，持续成长。">LicoUp by LicoLand · Open source, still growing.</span><button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg><span data-motion-label>Pause motion</span></button></div></footer>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <a class="brand" href="/" aria-label="LicoUp home" data-aria-en="LicoUp home" data-aria-zh="LicoUp 首页"><img src="/assets/licoup-mark.svg" alt="" width="32" height="32"><span>LicoUp</span></a>
+    <p data-en="People and agents, in one conversation." data-zh="人与智能体，同频对话。">People and agents, in one conversation.</p>
+    <nav class="footer-links" aria-label="Footer" data-aria-en="Footer" data-aria-zh="页脚导航">
+      <a href="/human-agent-collaboration-client/" data-en="Collaboration" data-zh="协作理念">Collaboration</a>
+      <a href="/status/" data-en="Compatibility" data-zh="兼容说明">Compatibility</a>
+      <a href="/product/" data-en="Product" data-zh="产品">Product</a>
+      <a href="https://github.com/LicoLand/LicoUp">GitHub</a>
+      <a href="https://licoup.net/" data-en="Network plan" data-zh="网络计划">Network plan</a>
+      <a href="https://lico.land/">LicoLand</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span data-en="LicoUp by LicoLand · Open source under AGPL-3.0-or-later" data-zh="LicoUp，由 LicoLand 打造 · 以 AGPL-3.0-or-later 开源">LicoUp by LicoLand · Open source under AGPL-3.0-or-later</span>
+    <button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg><span data-motion-label>Pause animation</span></button>
+  </div>
+</footer>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -185,7 +341,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       "@id": "https://licoup.com/#software",
       "name": "LicoUp",
       "url": "https://licoup.com/",
-      "applicationCategory": "DeveloperApplication",
+      "applicationCategory": "CommunicationApplication",
       "applicationSubCategory": "Human-Agent Collaboration Client",
       "description": "Open-source, local-first Human-Agent Collaboration Client built around conversation, context, and approvals, with local-agent conversations as its current foundation.",
       "isAccessibleForFree": true,

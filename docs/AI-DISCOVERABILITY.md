@@ -110,23 +110,20 @@ Add a new indexable page only when it contains distinct, durable information tha
 ## Homepage discovery path
 
 The homepage is the natural landing surface for organic discovery by both broad
-individual visitors and developers. Its visible, crawlable body moves from a
-three-line Agent Collaboration statement through three complementary kinds of
-entry:
+individual visitors and developers. Its visible, crawlable body moves from the
+"People. Agents. One conversation." statement and a labelled concept preview
+through three kinds of entry:
 
-- a static value strip linking conversation continuity to `/product/`, chosen
-  context to `/security/`, and human decisions to
-  `/human-agent-collaboration-client/`;
-- open problem-led rows linking a creative starting problem to
-  `/use-cases/#creative-work`, interface differences to
-  `/guides/ai-coding-agents/#quick-read`, and context visibility to
-  `/security/`;
-- a pale-lilac category guide and adjacent reading list linking the Human-Agent
-  Collaboration definition, coding-agent guide, orchestration comparison, and
-  architecture, followed by direct links to product, use cases, security, and
-  current status.
+- an agent strip linking the built-in adapters to `/status/`;
+- capability cards for what is available today and a Now / Next / Later
+  roadmap that separates current local-agent work from planned messaging,
+  shared results and federation;
+- a guide grid linking the Human-Agent Collaboration definition, use cases,
+  coding-agent guide, orchestration comparison, product, security,
+  architecture, and current compatibility, followed by FAQ answers that link
+  to the same pages.
 
-This structure lets a visitor recognize a problem, see an illustrative
+This structure lets a visitor recognize the product, see an illustrative
 experience, continue into a substantive answer, and find the current release.
 The homepage and its deeper pages use semantic headings, ordinary links, and
 server-readable HTML so their relationship remains understandable without

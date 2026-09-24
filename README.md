@@ -19,12 +19,14 @@ and verification evidence.
 The site is static HTML, CSS, and dependency-free JavaScript, with self-hosted
 fonts and artwork. The homepage shares markup, interactions, and responsive design across Chinese and English. The product guides retain their English source content and use the same visual system. Use `?lang=zh` or `?lang=en` to select a language explicitly.
 Language and motion choices are stored locally; the site has no analytics,
-backend calls, or live agent connection. Conversation examples are illustrative.
+backend calls, or live agent connection. The homepage shows a drawn, labelled
+concept preview of the messenger experience instead of client screenshots;
+its conversation is illustrative.
 
 Navigation, download links, product content, and FAQ work without JavaScript.
-Scripted scene selection, language switching, and optional motion are progressive
-enhancements. System reduced-motion settings and the page's pause control disable
-optional motion.
+The scripted concept preview, language switching, and optional motion are
+progressive enhancements. System reduced-motion settings and the page's pause
+control disable optional motion.
 
 Serve this directory with any static HTTP server for local preview. There is no
 build step. [DESIGN.md](DESIGN.md) records the implemented visual system;
@@ -42,8 +44,7 @@ publication remain separate from local website development and verification.
 The homepage body links directly to eight durable topics: the Human-Agent
 Collaboration category, coding-agent interfaces, orchestration versus
 collaboration, the product, use cases, architecture, security, and current
-compatibility. Static value links, problem-led pathways, the primary category guide,
-its reading list, and the compact guide directory connect the lively product
+compatibility. The guide grid, FAQ answers, and roadmap connect the product
 story to those deeper answers. Guide navigation preserves the same information
 architecture. Their canonical URLs are indexed by `sitemap.xml` and `llms.txt`,
 with crawler access described by `robots.txt`. These pages project product facts

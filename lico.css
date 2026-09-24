@@ -1,0 +1,87 @@
+.lico { display: inline-block; line-height: 0; }
+.lico-svg { width: 100%; height: auto; overflow: visible; }
+.lico-svg * { transform-box: view-box; }
+
+.lico-halo { opacity: 0; transition: opacity .6s ease; }
+.lico[data-glow] .lico-halo { opacity: 1; }
+.lico:not([data-glow]) .lico-rimlight { opacity: .55; }
+
+/* Parts hidden unless a mood asks for them */
+.lico-eyes-happy, .lico-eyes-closed, .lico-brows, .lico-mouth-open, .lico-mouth-frown, .lico-mouth-o,
+.lico-thought, .lico-zzz { opacity: 0; }
+.lico-eyes-open, .lico-mouth-smile { opacity: 1; }
+.lico-eyes-open, .lico-eyes-happy, .lico-eyes-closed, .lico-brows, .lico-mouth, .lico-thought, .lico-zzz, .lico-blush { transition: opacity .18s ease; }
+
+/* Pivots */
+.lico-body { transform-origin: 100px 205px; transition: transform .5s cubic-bezier(.34, 1.4, .64, 1); }
+.lico-head { transform-origin: 100px 150px; transition: transform .55s cubic-bezier(.34, 1.4, .64, 1); }
+.lico-look { transform: translate(calc(var(--lx, 0) * 1px), calc(var(--ly, 0) * 1px)); transition: transform .3s cubic-bezier(.16, 1, .3, 1); }
+.lico-eyes-open { transform-origin: 100px 98px; }
+.lico-arm-l { transform-origin: 84px 130px; transition: transform .5s cubic-bezier(.34, 1.4, .64, 1); }
+.lico-arm-r { transform-origin: 116px 130px; transition: transform .5s cubic-bezier(.34, 1.4, .64, 1); }
+.lico-clip { transform-origin: 140px 40px; }
+.lico-mouth-open { transform-origin: 100px 110px; }
+
+/* Idle life: breathe, blink, a tiny clip wiggle */
+.lico-body { animation: lico-breathe 4.2s ease-in-out infinite; }
+.lico-eyes-open { animation: lico-blink 5.2s infinite; }
+.lico-clip { animation: lico-clip 6s ease-in-out infinite; }
+
+/* Happy */
+.lico[data-mood="happy"] .lico-eyes-open, .lico[data-mood="happy"] .lico-mouth-smile { opacity: 0; }
+.lico[data-mood="happy"] .lico-eyes-happy, .lico[data-mood="happy"] .lico-mouth-open { opacity: 1; }
+.lico[data-mood="happy"] .lico-body { animation: lico-hop 1.4s cubic-bezier(.34, 1.4, .64, 1) infinite; }
+.lico[data-mood="happy"] .lico-arm-l { animation: lico-wave-l 1.4s ease-in-out infinite; }
+.lico[data-mood="happy"] .lico-arm-r { animation: lico-wave-r 1.4s ease-in-out infinite; }
+
+/* Listening: tilt in, eyes a little wider */
+.lico[data-mood="listening"] .lico-head { transform: rotate(-9deg); }
+.lico[data-mood="listening"] .lico-eyes-open { animation: lico-blink 3.6s infinite; }
+.lico[data-mood="listening"] .lico-arm-r { transform: translate(2px, -3px) rotate(-6deg); }
+
+/* Thinking: eyes up, hand to chin, thought dots */
+.lico[data-mood="thinking"] .lico-look { transform: translate(4px, -5px); }
+.lico[data-mood="thinking"] .lico-mouth-smile { opacity: 0; }
+.lico[data-mood="thinking"] .lico-mouth-o { opacity: 1; }
+.lico[data-mood="thinking"] .lico-head { transform: rotate(5deg); }
+.lico[data-mood="thinking"] .lico-arm-r { transform: translate(-22px, -12px) rotate(-38deg); }
+.lico[data-mood="thinking"] .lico-thought { opacity: 1; }
+.lico[data-mood="thinking"] .lico-thought circle { animation: lico-dot 1.5s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+.lico[data-mood="thinking"] .lico-thought circle:nth-child(2) { animation-delay: .2s; }
+.lico[data-mood="thinking"] .lico-thought circle:nth-child(3) { animation-delay: .4s; }
+
+/* Speaking: the mouth talks */
+.lico[data-mood="speaking"] .lico-mouth-smile { opacity: 0; }
+.lico[data-mood="speaking"] .lico-mouth-open { opacity: 1; animation: lico-talk .42s ease-in-out infinite alternate; }
+.lico[data-mood="speaking"] .lico-head { animation: lico-nod 1.6s ease-in-out infinite; }
+
+/* Sorry: brows up, small frown, a bit smaller */
+.lico[data-mood="sorry"] .lico-brows, .lico[data-mood="sorry"] .lico-mouth-frown { opacity: 1; }
+.lico[data-mood="sorry"] .lico-mouth-smile { opacity: 0; }
+.lico[data-mood="sorry"] .lico-head { transform: translateY(4px) rotate(5deg); }
+.lico[data-mood="sorry"] .lico-look { transform: translate(-1px, 3px); }
+.lico[data-mood="sorry"] .lico-arm-l { transform: translate(6px, 2px) rotate(8deg); }
+.lico[data-mood="sorry"] .lico-arm-r { transform: translate(-6px, 2px) rotate(-8deg); }
+
+/* Sleepy */
+.lico[data-mood="sleepy"] .lico-eyes-open, .lico[data-mood="sleepy"] .lico-mouth-smile { opacity: 0; }
+.lico[data-mood="sleepy"] .lico-eyes-closed, .lico[data-mood="sleepy"] .lico-mouth-o, .lico[data-mood="sleepy"] .lico-zzz { opacity: 1; }
+.lico[data-mood="sleepy"] .lico-head { transform: rotate(7deg); }
+.lico[data-mood="sleepy"] .lico-body { animation: lico-breathe 5.5s ease-in-out infinite; }
+.lico[data-mood="sleepy"] .lico-zzz path { animation: lico-z 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.lico[data-mood="sleepy"] .lico-look { transform: none; }
+
+@keyframes lico-breathe { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(1.012, .988); } }
+@keyframes lico-blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
+@keyframes lico-clip { 0%, 80%, 100% { transform: rotate(0); } 86% { transform: rotate(-8deg); } 92% { transform: rotate(4deg); } }
+@keyframes lico-hop { 0%, 100% { transform: translateY(0) scale(1, 1); } 30% { transform: translateY(-9px) scale(.98, 1.03); } 55% { transform: translateY(0) scale(1.03, .97); } }
+@keyframes lico-wave-l { 0%, 100% { transform: rotate(0); } 35% { transform: translate(-2px, -10px) rotate(24deg); } }
+@keyframes lico-wave-r { 0%, 100% { transform: rotate(0); } 35% { transform: translate(2px, -10px) rotate(-24deg); } }
+@keyframes lico-dot { 0%, 100% { opacity: .35; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.1); } }
+@keyframes lico-talk { from { transform: scaleY(.35); } to { transform: scaleY(1.05); } }
+@keyframes lico-nod { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-2.5deg); } 75% { transform: rotate(2.5deg); } }
+@keyframes lico-z { 0% { opacity: 0; transform: translate(0, 6px) scale(.8); } 30% { opacity: 1; } 100% { opacity: 0; transform: translate(8px, -12px) scale(1.1); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .lico *, .lico *::before, .lico *::after { animation: none !important; transition: none !important; }
+}

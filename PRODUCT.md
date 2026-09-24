@@ -30,12 +30,18 @@ network plans. Examples are synthetic. No runtime data is included.
 
 ## Brand Commitments
 
-Keep the existing LicoUp logo. The authorized redesign uses a lively,
-approachable consumer-product voice, expressive typography and rich, coherent
-motion, informed by Awwwards award-winning sites. The existing conversation
-magazine visual world remains the foundation while search-oriented category,
-use-case, and guide pathways become part of the same experience. Agent
-Collaboration is the core positioning. Chinese and English share one experience.
+LicoUp is presented as a communication product: a messenger in which people
+and AI agents share context, pass work along and deliver results where they
+belong, with the person in control. The long-term direction is human-agent
+messaging and content distribution; the site states that today's release
+connects local agents and labels the rest as roadmap. The design language is
+modern, premium, concise and energetic, and copy speaks to user-experience
+capability rather than implementation internals. The mascot Lico, a
+moon-like ice-cream scoop, is the friendly brand mark and LicoUp's future
+resident agent, not the theme of the copy. The client interface is
+shown as a labelled concept preview while the product front end is redesigned.
+Search-oriented category, use-case and guide pathways stay part of the same
+experience. Chinese and English share one experience.
 
 ## Accessibility
 
