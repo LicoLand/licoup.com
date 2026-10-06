@@ -3,3 +3,6 @@ docs/plans/
 docs/reports/
 cache/
 build/
+
+# Private local audit evidence and reports. Never publish.
+/.general-auditor/local/
