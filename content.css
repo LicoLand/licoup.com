@@ -70,6 +70,18 @@
 .document-links a:hover::after,
 .document-links a[aria-current="page"]::after { transform: scaleX(1); }
 
+.document-language-toggle {
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 550;
+  cursor: pointer;
+}
+
 .document-shell main {
   max-width: var(--max);
   margin-inline: auto;
