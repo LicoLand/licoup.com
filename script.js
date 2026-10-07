@@ -75,6 +75,7 @@
     const menuLabel = menuToggle?.querySelector("[data-menu-label]");
     const motionToggle = document.querySelector("#motion-toggle");
     const motionLabel = motionToggle?.querySelector("[data-motion-label]");
+    const motionIcon = motionToggle?.querySelector("use");
     const desktopNavigation = window.matchMedia("(min-width: 881px)");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let userPaused = readPreference(MOTION_KEY) === "paused";
@@ -109,6 +110,7 @@
         motionToggle.setAttribute("aria-pressed", String(paused));
         motionToggle.setAttribute("aria-label", label);
         if (motionLabel) motionLabel.textContent = label;
+        if (motionIcon) motionIcon.setAttribute("href", paused ? "#i-play" : "#i-pause");
       }
       for (const listener of motionListeners) listener(paused);
     };
@@ -314,6 +316,46 @@
     }
     // Layout can settle after webfonts and images load; keep the grip exact.
     window.addEventListener("load", requestScroll);
+
+    // Hero mist: one loop owns the blobs' transforms so the slow drift and
+    // the pointer follow compose instead of fighting. Each blob follows with
+    // its own depth — the near blob moves most, which is what makes the
+    // parallax read. The px/py URL parameters seed the pointer for testing.
+    const mistBlobs = [...document.querySelectorAll(".mist i")];
+    if (mistBlobs.length && !reducedMotion.matches) {
+      const mistQuery = new URLSearchParams(location.search);
+      const drift = [
+        { x: 84, y: 58, period: 34000, phase: 0 },
+        { x: 70, y: 46, period: 28000, phase: 2.1 },
+        { x: 54, y: 74, period: 38000, phase: 4.2 },
+        { x: 42, y: 30, period: 26000, phase: 1.3 },
+      ];
+      const depth = [0.7, 1.0, 1.3, 1.8];
+      let targetX = (parseFloat(mistQuery.get("px")) || 0.5) - 0.5;
+      let targetY = (parseFloat(mistQuery.get("py")) || 0.5) - 0.5;
+      const pointer = mistBlobs.map(() => ({ x: targetX, y: targetY }));
+      window.addEventListener("pointermove", (event) => {
+        targetX = event.clientX / window.innerWidth - 0.5;
+        targetY = event.clientY / window.innerHeight - 0.5;
+      }, { passive: true });
+      const mistTick = (now) => {
+        if (!motionIsPaused()) {
+          for (let index = 0; index < mistBlobs.length; index += 1) {
+            const d = drift[index % drift.length];
+            const point = pointer[index];
+            point.x += (targetX - point.x) * 0.055;
+            point.y += (targetY - point.y) * 0.055;
+            const angle = (now / d.period) * Math.PI * 2 + d.phase;
+            const follow = depth[index % depth.length];
+            const x = Math.cos(angle) * d.x + point.x * 84 * follow;
+            const y = Math.sin(angle) * d.y + point.y * 56 * follow;
+            mistBlobs[index].style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
+          }
+        }
+        requestAnimationFrame(mistTick);
+      };
+      requestAnimationFrame(mistTick);
+    }
 
     // Illustrative messenger conversation
     const chatLog = document.querySelector("#chat-log");

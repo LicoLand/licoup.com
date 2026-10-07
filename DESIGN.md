@@ -108,8 +108,9 @@ Warm near-white paper and white surfaces carry the page; deep ink is used for
 text. Violet is the brand accent: the primary button (a deep-violet gradient
 with a gold sheen on hover), your own messages, badges, selections and links.
 Gold is the glint: eyebrows, attention states such as approvals, the "Next"
-roadmap tag and the "Today" marker. The hero aurora mixes lilac and violet
-with a soft gold glow, a few gold glints twinkle slowly, and the second hero
+roadmap tag and the "Today" marker. The hero wraps the opening in a
+taro-and-cream mist: soft violet blobs drift and follow the pointer with
+per-blob depth under a film-grain haze, and the second hero
 line fades from ink into violet and a soft orchid pink, matching the client. Green signals available or
 completed states.
 
@@ -160,7 +161,8 @@ Controls are full pills; cards use 24px radii, the window 22px, nested elements
 
 ## Motion
 
-Motion is smooth and purposeful: hero lines rise once, a slow aurora drifts,
+Motion is smooth and purposeful: hero lines rise once, the hero mist drifts
+and follows the pointer with per-blob depth,
 the messenger window flattens from a slight tilt as it scrolls into view,
 sections fade up once, capability vignettes loop quietly, and the statement
 lights word by word with scroll. The messenger script runs only while visible

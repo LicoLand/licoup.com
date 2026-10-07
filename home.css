@@ -42,16 +42,22 @@ html:not([lang="zh"]) [data-lang="zh"] { display: none !important; }
 .text-link:hover .icon { transform: translateX(4px); }
 .text-link:hover span { color: var(--violet-ink); }
 
-/* Aurora */
+/* Mist: layered taro and cream haze. The hero blobs drift and follow the
+   pointer with per-blob depth (script.js owns their transforms); the closing
+   section keeps two soft blobs of the same palette, and a film-grain overlay
+   gives the mist its hazy finish. */
 .aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
-.aurora i { position: absolute; width: 46vw; max-width: 720px; aspect-ratio: 1; border-radius: 50%; filter: blur(90px); opacity: .5; animation: float 18s ease-in-out infinite; }
-.aurora i:nth-child(1) { top: -18%; left: 6%; background: #c7b6ff; }
-.aurora i:nth-child(2) { top: -8%; right: 4%; background: #a996ff; animation-delay: -6s; animation-duration: 22s; }
-.aurora i:nth-child(3) { top: 26%; left: 36%; width: 30vw; background: #f4d894; opacity: .42; animation-delay: -11s; }
-.aurora-soft i { opacity: .35; }
-.glints { position: absolute; inset: 0; pointer-events: none; }
-.glints i { position: absolute; left: var(--x); top: var(--y); width: 5px; height: 5px; border-radius: 50%; background: #f6dc9c; box-shadow: 0 0 10px 3px rgb(236 196 104 / 55%); opacity: 0; animation: glint 4.5s ease-in-out var(--d) infinite; }
-.glints i:nth-child(3n) { width: 3px; height: 3px; }
+.mist i { position: absolute; aspect-ratio: 1; border-radius: 50%; filter: blur(95px); will-change: transform; }
+.mist i:nth-child(1) { width: 52vw; max-width: 780px; top: -20%; left: 2%; background: #c3aae8; opacity: .55; }
+.mist i:nth-child(2) { width: 44vw; max-width: 660px; top: -12%; right: 0; background: #b39ae0; opacity: .5; }
+.mist i:nth-child(3) { width: 34vw; max-width: 520px; top: 30%; left: 30%; background: #f4e6c8; opacity: .5; filter: blur(85px); }
+.mist i:nth-child(4) { width: 26vw; max-width: 400px; top: 46%; right: 14%; background: #ddd0f5; opacity: .62; filter: blur(75px); }
+.mist-grain { position: absolute; inset: 0; pointer-events: none; opacity: .05; mix-blend-mode: multiply; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.aurora-soft i { position: absolute; aspect-ratio: 1; border-radius: 50%; filter: blur(90px); }
+.aurora-soft i:nth-child(1) { width: 42vw; max-width: 640px; top: -24%; left: 8%; background: #cdb9ee; opacity: .4; animation: mist-drift-a 30s ease-in-out infinite alternate; }
+.aurora-soft i:nth-child(2) { width: 32vw; max-width: 480px; bottom: -22%; right: 6%; background: #f4e6c8; opacity: .38; animation: mist-drift-b 36s ease-in-out infinite alternate; }
+@keyframes mist-drift-a { from { transform: translate(0, 0) scale(1); } to { transform: translate(6%, 8%) scale(1.08); } }
+@keyframes mist-drift-b { from { transform: translate(0, 0) scale(1.04); } to { transform: translate(-5%, -6%) scale(.97); } }
 
 /* Hero */
 .hero { position: relative; overflow: hidden; padding: 148px 24px 60px; text-align: center; }
@@ -353,10 +359,8 @@ html[lang="zh"] h2 { letter-spacing: .01em; }
 .js .guide-grid .reveal:nth-child(n + 4) { transition-delay: .12s; }
 .js .guide-grid .reveal:nth-child(n + 6) { transition-delay: .18s; }
 
-@keyframes glint { 0%, 100% { opacity: 0; transform: translateY(6px) scale(.6); } 45%, 55% { opacity: .9; transform: translateY(-4px) scale(1); } }
 @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 @keyframes line-up { from { transform: translateY(105%); } to { transform: none; } }
-@keyframes float { 0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(6%, 8%) scale(1.08); } 66% { transform: translate(-5%, 4%) scale(.95); } }
 @keyframes msg-in { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: none; } }
 @keyframes pop { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
 @keyframes dots { 0%, 100% { transform: translateY(0); opacity: .45; } 50% { transform: translateY(-3px); opacity: 1; } }
