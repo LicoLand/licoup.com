@@ -239,15 +239,16 @@
 
       const still = motionIsPaused();
       if (appFrame) {
+        const top = appFrame.getBoundingClientRect().top;
         if (still) {
           appFrame.style.removeProperty("--tilt");
           appFrame.style.removeProperty("--scale");
         } else {
-          const top = appFrame.getBoundingClientRect().top;
           const progress = clamp((vh - top) / (vh * 0.6));
           appFrame.style.setProperty("--tilt", `${(10 * (1 - progress)).toFixed(2)}deg`);
           appFrame.style.setProperty("--scale", (0.94 + 0.06 * progress).toFixed(3));
         }
+        updateGrip(top);
       }
 
       for (const { element, words } of scrubs) {
@@ -288,6 +289,31 @@
     });
     closingLico?.addEventListener("click", () => setMood(closingLico, "happy", 1800));
     closingLico?.addEventListener("pointerenter", () => setMood(closingLico, "happy", 1600));
+
+    // One grip line, one coordinate system. Lico never leaves the window's
+    // local axes: while the window's edge is below the screen, Lico slides up
+    // its own axis and waits with its palms on the screen's bottom edge; the
+    // window's edge picks it up the moment it rises to meet them. The position
+    // is a continuous function of scroll, so the handoff has no jump.
+    const updateGrip = (top = appFrame ? appFrame.getBoundingClientRect().top : 0) => {
+      if (!peek || !appFrame) return;
+      const tilt = parseFloat(appFrame.style.getPropertyValue("--tilt")) || 0;
+      const scale = parseFloat(appFrame.style.getPropertyValue("--scale")) || 1;
+      const grip = scale * Math.cos((tilt * Math.PI) / 180);
+      peek.style.setProperty("--floor", `${(Math.min(0, window.innerHeight - top) / grip).toFixed(1)}px`);
+    };
+    if (peek && appFrame) {
+      // The entrance animation also moves the window without firing scroll,
+      // so keep refreshing the grip until it has settled.
+      const warmupEnd = performance.now() + 3000;
+      const gripTick = () => {
+        updateGrip();
+        if (performance.now() < warmupEnd) requestAnimationFrame(gripTick);
+      };
+      requestAnimationFrame(gripTick);
+    }
+    // Layout can settle after webfonts and images load; keep the grip exact.
+    window.addEventListener("load", requestScroll);
 
     // Illustrative messenger conversation
     const chatLog = document.querySelector("#chat-log");

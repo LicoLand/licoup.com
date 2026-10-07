@@ -89,9 +89,15 @@ finish without outlines or surface texture.
 - The same template renders the client's static expressions and square
   avatar tiles; that preset pack and its export pipeline are owned and
   distributed by the LicoUp client repository, not by this site.
-- On the homepage, Lico peeks over the messenger window with its cup hidden,
-  thinks while the agent types, cheers when the result is shared, and says
-  hello when clicked.
+- On the homepage, Lico's home is the messenger window's top-right edge with
+  its cup hidden: it grips the edge with both hands, thinks while the agent
+  types, cheers when the result is shared, and says hello when clicked. Lico
+  never leaves the window's local coordinate system: while the window's edge
+  is below the screen, Lico slides up its own axis and waits with its palms
+  resting on the bottom edge of the screen itself; the moment the window's
+  edge rises to meet its palms, it rides upward with the window. The position
+  is a continuous function of scroll, so the handoff is exact by construction
+  and no jump or flight animation is involved.
 
 **The One Mascot Rule.** Use the mascot as a single, deliberate presence per
 view. Never tile it, scatter it as decoration, or replace UI with it.
