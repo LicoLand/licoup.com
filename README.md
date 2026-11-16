@@ -1,6 +1,6 @@
 # licoup.com
 
-Updated: 2026-09-25
+Updated: 2026-11-17
 
 Public product website for LicoUp, a secure conversation experience shared by
 people and agents. The current local-agent client is its first implementation
@@ -32,11 +32,12 @@ product summary, download links, agents, features, roadmap, guides, and FAQ.
 That document is also what search engines index. System reduced-motion
 settings disable optional motion.
 
-Serve this directory with any static HTTP server for local preview. There is no
+GitHub Pages publishes `docs/` from the main branch; serve it locally with any
+static HTTP server (`python3 -m http.server --directory docs`). There is no
 build step. [DESIGN.md](DESIGN.md) records the implemented visual system;
 [PRODUCT.md](PRODUCT.md) is the website presentation brief and links to product
 authorities. Asset origins and font licenses are recorded in
-[assets/README.md](assets/README.md).
+[ASSETS.md](ASSETS.md).
 
 The reviewed Cloudflare BIND import is stored at
 `dns/cloudflare-github-pages.txt`. Organization-verification tokens are added
@@ -59,7 +60,8 @@ those authorities.
 
 Run `python3 tools/check_site.py` to verify canonical pages, metadata, internal
 links, sitemap coverage, crawler configuration, and the license projection.
-`CNAME` binds the site to `licoup.com`; GitHub Pages publishes the `main` branch.
+`docs/CNAME` binds the site to `licoup.com`; GitHub Pages publishes `docs/` from
+the `main` branch.
 This continuously delivered website has no independent product version. Search
 and answer-engine content follows the
-[discoverability guide](docs/AI-DISCOVERABILITY.md).
+[discoverability guide](AI-DISCOVERABILITY.md).
