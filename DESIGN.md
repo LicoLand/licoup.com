@@ -89,15 +89,8 @@ finish without outlines or surface texture.
 - The same template renders the client's static expressions and square
   avatar tiles; that preset pack and its export pipeline are owned and
   distributed by the LicoUp client repository, not by this site.
-- On the homepage, Lico's home is the messenger window's top-right edge with
-  its cup hidden: it grips the edge with both hands, thinks while the agent
-  types, cheers when the result is shared, and says hello when clicked. Lico
-  never leaves the window's local coordinate system: while the window's edge
-  is below the screen, Lico slides up its own axis and waits with its palms
-  resting on the bottom edge of the screen itself; the moment the window's
-  edge rises to meet its palms, it rides upward with the window. The position
-  is a continuous function of scroll, so the handoff is exact by construction
-  and no jump or flight animation is involved.
+- On the homepage, Lico opens the introduction conversation and cheers when
+  clicked; its avatar marks Lico's messages.
 
 **The One Mascot Rule.** Use the mascot as a single, deliberate presence per
 view. Never tile it, scatter it as decoration, or replace UI with it.
@@ -108,11 +101,9 @@ Warm near-white paper and white surfaces carry the page; deep ink is used for
 text. Violet is the brand accent: the primary button (a deep-violet gradient
 with a gold sheen on hover), your own messages, badges, selections and links.
 Gold is the glint: eyebrows, attention states such as approvals, the "Next"
-roadmap tag and the "Today" marker. The hero wraps the opening in a
-taro-and-cream mist: soft violet blobs drift and follow the pointer with
-per-blob depth under a film-grain haze, and the second hero
-line fades from ink into violet and a soft orchid pink, matching the client. Green signals available or
-completed states.
+roadmap tag and the "Today" marker. Green signals available or completed
+states. Approval surfaces carry a fine waffle lattice over cream, the cup that
+holds a decision. There are no blurred halos or decorative backgrounds.
 
 **The Violet and Gold Rule.** Violet leads, gold highlights. Keep gold small
 and luminous; never use orange or large saturated fields.
@@ -128,29 +119,27 @@ characters. English and Chinese share one hierarchy and composition.
 
 ## Layout
 
-Content is capped at 1200px with 32px gutters (20px below 880px). The homepage
-reads as: centred hero with the messenger concept preview, agent strip,
-capabilities available today, a scroll-lit statement, a Now / Next / Later
-roadmap, guides, FAQ and a closing call to action. At 1100px the messenger drops
-its member panel, at 880px navigation becomes a menu and card grids stack, and
-at 720px the messenger shows only the conversation.
+The homepage is the client. `client.css` and `app.js` draw a light desktop
+messenger that fills the page: the conversation list is a rounded card on the
+left, and the conversation and the details pane share the page ground,
+separated by hairlines. Conversation content is capped at 760px. Below 1180px
+the details pane becomes a drawer; below 720px the conversation list becomes a
+drawer.
 
-Guide pages share the tokens, the mark and neutral white cards through
-`content.css`.
+The conversations are the site's sections: Lico (introduction, questions and
+download), Launch crew (a labelled concept preview), Features, Roadmap, Guides
+and Agents. Every control works: search filters conversations, the language
+button switches Chinese and English, chips and typed messages get answers,
+approvals can be allowed or denied, documents can be edited and shared, and
+visibility switches change what an agent can read.
 
-## The messenger concept preview
+Without JavaScript the same content is served as a plain document (`.static`),
+which is also the indexed content. Guide pages share the tokens, the mark and
+neutral white cards through `content.css` and `styles.css`.
 
-The client front end is being redesigned, so the site shows a drawn, clearly
-labelled concept of the experience instead of product screenshots. The
-conversation "Launch crew" includes people (Mia, Leo), agents (Claude Code,
-Codex) and channels. The scripted scene demonstrates the mention picker, an
-explicit approval, an agent result delivered as a content card, a teammate's
-reply, and sharing that card to two destinations. Without JavaScript, or when
-motion is paused or reduced, the finished conversation is shown statically.
-
-**The Honest Preview Rule.** Every concept of future capability is labelled.
-The hero note and the roadmap state that today's release connects local agents
-and that messaging with people is roadmap work.
+**The Honest Preview Rule.** Replies are scripted. The Launch crew conversation
+is labelled a concept preview, and the introduction states that today's release
+connects local agents and that messaging with people is roadmap work.
 
 ## Depth and shape
 
@@ -161,14 +150,9 @@ Controls are full pills; cards use 24px radii, the window 22px, nested elements
 
 ## Motion
 
-Motion is smooth and purposeful: hero lines rise once, the hero mist drifts
-and follows the pointer with per-blob depth,
-the messenger window flattens from a slight tilt as it scrolls into view,
-sections fade up once, capability vignettes loop quietly, and the statement
-lights word by word with scroll. The messenger script runs only while visible
-and cancels on pause, language change or hidden tabs. A footer control pauses
-all animation; the reduced-motion preference disables animation, transitions,
-smooth scrolling and pointer effects.
+Messages rise in once, typing dots precede a reply, controls answer presses
+with a small spring, and Lico breathes, blinks and follows the pointer. The
+reduced-motion preference disables animation and transitions.
 
 ## Do's and Don'ts
 

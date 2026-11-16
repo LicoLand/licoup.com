@@ -1,5 +1,7 @@
 # licoup.com
 
+Updated: 2026-09-25
+
 Public product website for LicoUp, a secure conversation experience shared by
 people and agents. The current local-agent client is its first implementation
 phase. Product facts remain owned by the
@@ -17,16 +19,18 @@ and verification evidence.
 ## Website
 
 The site is static HTML, CSS, and dependency-free JavaScript, with self-hosted
-fonts and artwork. The homepage shares markup, interactions, and responsive design across Chinese and English. The product guides retain their English source content and use the same visual system. Use `?lang=zh` or `?lang=en` to select a language explicitly.
-Language and motion choices are stored locally; the site has no analytics,
-backend calls, or live agent connection. The homepage shows a drawn, labelled
-concept preview of the messenger experience instead of client screenshots;
-its conversation is illustrative.
+fonts and artwork. The homepage is the client: with JavaScript the whole page is
+a working LicoUp-style messenger whose conversations carry the product content,
+in Chinese and English (`?lang=zh` or `?lang=en` selects one explicitly, and the
+choice is stored locally). Each conversation has its own address, such as
+`/#features`. Its replies are scripted and its group conversation is a
+labelled concept preview; the site has no analytics, backend calls, or live
+agent connection. The product guides retain their English source content.
 
-Navigation, download links, product content, and FAQ work without JavaScript.
-The scripted concept preview, language switching, and optional motion are
-progressive enhancements. System reduced-motion settings and the page's pause
-control disable optional motion.
+Without JavaScript the homepage is the same content as a plain document:
+product summary, download links, agents, features, roadmap, guides, and FAQ.
+That document is also what search engines index. System reduced-motion
+settings disable optional motion.
 
 Serve this directory with any static HTTP server for local preview. There is no
 build step. [DESIGN.md](DESIGN.md) records the implemented visual system;
@@ -56,6 +60,6 @@ those authorities.
 Run `python3 tools/check_site.py` to verify canonical pages, metadata, internal
 links, sitemap coverage, crawler configuration, and the license projection.
 `CNAME` binds the site to `licoup.com`; GitHub Pages publishes the `main` branch.
-This continuously delivered website has no independent product version; see
-[the release profile](docs/releases/README.md). Search and answer-engine content
-follows [the discoverability guide](docs/AI-DISCOVERABILITY.md).
+This continuously delivered website has no independent product version. Search
+and answer-engine content follows the
+[discoverability guide](docs/AI-DISCOVERABILITY.md).
